@@ -1,0 +1,15 @@
+.text__medium {
+    font-size: 2.5em;
+}
+
+.text__medium__t-margin--large {
+    margin-top: 2em;
+}
+
+.text__jumbo {
+    font-size: 12em;
+}
+
+.text__mada {
+    font-family: 'MadaBold', sans-serif;
+}

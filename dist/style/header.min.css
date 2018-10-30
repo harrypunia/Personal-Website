@@ -1,1 +1,1 @@
-.header{width:100vw;height:50px;background:#151515}
+.header{will-change:transform;position:fixed;width:20vw;height:auto;top:50vh;z-index:1;-webkit-animation:headerIn 1s cubic-bezier(.07,.45,.38,.98);-webkit-animation-delay:1.2s;-webkit-animation-fill-mode:forwards;-webkit-transform:translate3d(-100%,-50%,0);transform:translate3d(-100%,-50%,0);animation:headerIn 1s cubic-bezier(.07,.45,.38,.98);animation-delay:1.2s;animation-fill-mode:forwards}.header__elements{cursor:pointer;opacity:.3;text-align:left}.header__elements:first-child{margin-top:0!important}

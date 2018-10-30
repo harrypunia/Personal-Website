@@ -1,0 +1,65 @@
+.main {
+    will-change: background-size, filter;
+    width: 100vw;
+    height: 100vh;
+}
+
+.canvas {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+}
+
+.main__text {
+    position: absolute;
+    width: auto;
+    height: 2.5em;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    overflow: hidden;
+}
+
+.main__text h1 {
+    will-change: transform;
+    -webkit-animation: textIn .5s cubic-bezier(.07, .45, .38, .98);
+    -webkit-animation-fill-mode: forwards;
+    -webkit-transform: translate3d(0, 150%, 0);
+    transform: translate3d(0, 150%, 0);
+    animation: textIn .5s cubic-bezier(.07, .45, .38, .98);
+    animation-fill-mode: forwards;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+
+.main__text-1 {
+    left: 20vw;
+    top: 20vh;
+}
+
+.main__text-1 h1 {
+    -webkit-animation-delay: .1s;
+    animation-delay: .1s;
+}
+
+.main__text-2 {
+    right: 5vw;
+    top: 50vh;
+}
+
+.main__text-2 h1 {
+    -webkit-animation-delay: .4s;
+    animation-delay: .4s;
+}
+
+.main__text-3 {
+    left: 25vw;
+    top: 80vh;
+}
+
+.main__text-3 h1 {
+    -webkit-animation-delay: .7s;
+    animation-delay: .7s;
+}

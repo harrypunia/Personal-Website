@@ -5,12 +5,63 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="dist/style/global.min.css">
-    <link rel="stylesheet" href="dist/style/header.min.css">
+    <link rel="stylesheet" href="dist/style/wrapper.min.css">
+    <link rel="stylesheet" href="dist/style/button.min.css">
+    <link rel="stylesheet" href="dist/style/text.min.css">
+    <link rel="stylesheet" href="dev/style/fonts.css">
+    <link rel="stylesheet" href="dev/style/animation.css">
+    <link rel="stylesheet" href="dev/style/header.css">
+    <link rel="stylesheet" href="dev/style/main.css">
+    <link rel="stylesheet" href="dev/style/body.css">
+    <link rel="stylesheet" href="dev/style/footer.css">
+    <script src="lib/p5.min.js"></script>
     <title>Harry Punia</title>
 </head>
 
 <body>
-    <div class="header"></div>
+    <div class="header">
+        <div class="wrapper wrapper__flex wrapper__flex__left-center text__mada">
+            <div class="header__elements text__medium text__medium__t-margin--large">
+                <p>Illustrations</p>
+            </div>
+            <div class="header__elements text__medium text__medium__t-margin--large">
+                <p>Branding</p>
+            </div>
+            <div class="header__elements text__medium text__medium__t-margin--large">
+                <p>Photography</p>
+            </div>
+            <div class="header__elements text__medium text__medium__t-margin--large">
+                <p>3D</p>
+            </div>
+            <div class="header__elements text__medium text__medium__t-margin--large">
+                <p>About</p>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div id="canvas"></div>
+        <div class="wrapper">
+            <div class="main__text main__text-1 text__jumbo text__mada">
+                <h1>Design</h1>
+            </div>
+            <div class="main__text main__text-2 text__jumbo text__mada">
+                <h1>Changes</h1>
+            </div>
+            <div class="main__text main__text-3 text__jumbo text__mada">
+                <h1>Everything</h1>
+            </div>
+        </div>
+    </div>
+    <div class="body">
+        <div class="wrapper"></div>
+    </div>
+    <div class="footer">
+        <div class="wrapper"></div>
+    </div>
+
+    <script src="dev/js/init.js"></script>
+    <script src="dev/js/particle.js"></script>
+    <script src="dev/js/canvas.js"></script>
 </body>
 
 </html>
