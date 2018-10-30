@@ -2,7 +2,8 @@
     will-change: transform;
     position: fixed;
     width: 20vw;
-    top: 50vh;
+    height: auto;
+    top: 120vh;
     -webkit-animation: headerIn 1s cubic-bezier(.07, .45, .38, .98);
     -webkit-animation-delay: 1.2s;
     -webkit-animation-fill-mode: forwards;
@@ -19,14 +20,14 @@
     backface-visibility: hidden;
     z-index: 999;
     display: block;
+    overflow: hidden;
 }
 
 .header__elements {
+    float: left;
+    clear: both;
     cursor: pointer;
     opacity: .3;
     text-align: left;
-}
 
-.header__elements:first-child {
-    margin-top: 0 !important;
 }

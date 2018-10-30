@@ -1,10 +1,11 @@
 var particles = [],
     population = 50,
     chance = 100,
-    force = 20;
+    force = 20,
+    canvas;
 
 function setup() {
-    const canvas = createCanvas(window.innerWidth, window.innerHeight);
+    canvas = createCanvas(window.innerWidth, window.innerHeight);
     canvas.parent(sketch);
     for (let i = 0; i < 50; i++) {
         particles[i] = new Particle(Math.random() * window.innerWidth, Math.random() * window.innerHeight);
@@ -29,6 +30,6 @@ function draw() {
     }
 }
 
-function windowResized() {
-    resizeCanvas(window.innerWidth, window.innerHeight);
+window.onresize = function () {
+    canvas.size(window.innerWidth, window.innerHeight);
 }
