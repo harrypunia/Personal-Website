@@ -14,11 +14,12 @@
     backface-visibility: hidden;
     z-index: 999;
     display: block;
-    -webkit-transition: transform 1s cubic-bezier(.48, .01, .29, .98);
+    -webkit-transition: transform .6s cubic-bezier(.48, .01, .29, .98);
     -webkit-transition: -webkit-transform 1s cubic-bezier(.48, .01, .29, .98);
-    transition: -webkit-transform 1s cubic-bezier(.48, .01, .29, .98);
-    transition: transform 1s cubic-bezier(.48, .01, .29, .98);
-    transition: transform 1s cubic-bezier(.48, .01, .29, .98), -webkit-transform 1s cubic-bezier(.48, .01, .29, .98);
+    transition: -webkit-transform .6s cubic-bezier(.48, .01, .29, .98);
+    -webkit-transition: -webkit-transform .6s cubic-bezier(.48, .01, .29, .98);
+    transition: transform .6s cubic-bezier(.48, .01, .29, .98);
+    transition: transform .6s cubic-bezier(.48, .01, .29, .98), -webkit-transform .6s cubic-bezier(.48, .01, .29, .98);
 }
 
 .header__elements {
@@ -33,8 +34,8 @@
 .headerIn {
     -webkit-transform: translate3d(0%, 0%, 0) !important;
     transform: translate3d(0%, 0%, 0) !important;
-    -webkit-transition: -webkit-transform 1s cubic-bezier(.48, .01, .29, .98);
-    transition: -webkit-transform 1s cubic-bezier(.48, .01, .29, .98);
-    transition: transform 1s cubic-bezier(.48, .01, .29, .98);
-    transition: transform 1s cubic-bezier(.48, .01, .29, .98), -webkit-transform 1s cubic-bezier(.48, .01, .29, .98);
+    -webkit-transition: -webkit-transform .6s cubic-bezier(.23, .54, .59, .91);
+    transition: -webkit-transform .6s cubic-bezier(.23, .54, .59, .91);
+    transition: transform .6s cubic-bezier(.23, .54, .59, .91);
+    transition: transform .6s cubic-bezier(.23, .54, .59, .91), -webkit-transform .6s cubic-bezier(.23, .54, .59, .91);
 }
