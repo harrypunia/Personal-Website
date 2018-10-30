@@ -1,4 +1,4 @@
-window.addEventListener("scroll", () => {
+window.addEventListener("scroll", e => {
     let y = window.pageYOffset;
-    console.log(y);
+    y > 400 ? (header.classList.add('headerIn')) : (header.classList.remove('headerIn'));
 })
