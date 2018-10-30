@@ -5,7 +5,8 @@ function Particle(posX, posY) {
 
     this.show = function () {
         noFill();
-        stroke(255, 0, 150, 80);
+        strokeWeight(4);
+        stroke(255, 0, 150, 100);
         point(this.pos.x, this.pos.y);
     }
     this.update = function () {
@@ -31,7 +32,8 @@ function Particle(posX, posY) {
         this.pos.y < 0 ? this.pos.y = window.innerHeight : 0;
     }
     this.link = function (x1, y1, x2, y2) {
-        stroke(255, 2);
+        stroke(255, 10);
+        strokeWeight(1);
         line(x1, y1, x2, y2);
     }
 }

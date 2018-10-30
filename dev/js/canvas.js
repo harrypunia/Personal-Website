@@ -14,7 +14,7 @@ function setup() {
 }
 
 function draw() {
-    background(20, 20, 30, 30);
+    background(20, 20, 30, 15);
     for (let i = 0; i < particles.length; i++) {
         particles[i].update();
         particles[i].show();
