@@ -25,3 +25,9 @@
         font-size: 6em;
     }
 }
+
+@media screen and (max-width: 800px) {
+    .text__jumbo {
+        font-size: 4em;
+    }
+}

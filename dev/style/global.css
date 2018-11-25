@@ -8,11 +8,21 @@ body {
 
 .container {
     width: 100vw;
-    min-width: 320px;
+    min-width: 480px;
     height: auto;
+    background: grey;
 }
 
-h1,
-p {
-    margin: 0;
+#canvas {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    transform: translate3d(0, 0, 0);
+    user-select: none;
+    backface-visibility: hidden;
+    z-index: -1;
+    display: block;
+    vertical-align: bottom;
 }
