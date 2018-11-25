@@ -1,6 +1,6 @@
 var particles = [],
     population = 50,
-    chance = 100,
+    chance = 150,
     force = 20,
     canvas;
 
@@ -23,7 +23,7 @@ function draw() {
         }
         for (let j = 0; j < particles.length; j++) {
             let gap = dist(particles[i].pos.x, particles[i].pos.y, particles[j].pos.x, particles[j].pos.y);
-            if (gap < 200 && gap > 199 && i != j) {
+            if (Math.floor(gap) == 100 && i != j) {
                 particles[j].link(particles[i].pos.x, particles[i].pos.y, particles[j].pos.x, particles[j].pos.y);
             }
         }

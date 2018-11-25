@@ -10,13 +10,8 @@
     top: 0;
     width: 100vw;
     height: 100vh;
-    -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
-    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     z-index: -1;
     display: block;
@@ -28,22 +23,15 @@
     float: left;
     width: auto;
     height: 2.5em;
-    -webkit-transform: translate(0, -50%);
     transform: translate(0, -50%);
     overflow: hidden;
 }
 
 .main__text h1 {
     will-change: transform;
-    -webkit-animation: textIn 1.2s cubic-bezier(.09, .39, .31, 1);
-    -webkit-animation-fill-mode: forwards;
-    -webkit-transform: translate3d(0, 150%, 0);
     transform: translate3d(0, 150%, 0);
     animation: textIn 1.2s cubic-bezier(.09, .39, .31, 1);
     animation-fill-mode: forwards;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
     cursor: default;
 }
@@ -55,7 +43,6 @@
 }
 
 .main__text-1 h1 {
-    -webkit-animation-delay: .1s;
     animation-delay: .1s;
 }
 
@@ -65,7 +52,6 @@
 }
 
 .main__text-2 h1 {
-    -webkit-animation-delay: .4s;
     animation-delay: .4s;
 }
 
@@ -75,6 +61,5 @@
 }
 
 .main__text-3 h1 {
-    -webkit-animation-delay: .7s;
     animation-delay: .7s;
 }
