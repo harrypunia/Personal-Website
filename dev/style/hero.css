@@ -1,7 +1,10 @@
-.main {
+.hero {
+    position: relative;
     will-change: background-size, filter;
     width: 100%;
-    height: auto;
+    height: 100vh;
+    min-height: 800px;
+    background: maroon;
 }
 
 #canvas {
@@ -18,16 +21,15 @@
     vertical-align: bottom;
 }
 
-.main__text {
-    position: relative;
-    float: left;
-    width: auto;
+.hero__text {
+    position: absolute;
+    right: 0;
     height: 2.5em;
-    transform: translate(0, -50%);
     overflow: hidden;
+    background: black;
 }
 
-.main__text h1 {
+.hero__text h1 {
     will-change: transform;
     transform: translate3d(0, 150%, 0);
     animation: textIn 1.2s cubic-bezier(.09, .39, .31, 1);
@@ -36,30 +38,40 @@
     cursor: default;
 }
 
-.main__text-1 {
-    float: right;
-    margin-top: 120px;
+.hero__text-1 {
+    top: 5%;
     margin-right: 30%;
 }
 
-.main__text-1 h1 {
+.hero__text-1 h1 {
     animation-delay: .1s;
 }
 
-.main__text-2 {
-    float: right;
+.hero__text-2 {
+    top: 50%;
+    transform: translateY(-50%);
     margin-right: 5%;
 }
 
-.main__text-2 h1 {
+.hero__text-2 h1 {
     animation-delay: .4s;
 }
 
-.main__text-3 {
-    float: right;
+.hero__text-3 {
+    bottom: 5%;
     margin-right: 5%;
 }
 
-.main__text-3 h1 {
+.hero__text-3 h1 {
     animation-delay: .7s;
+}
+
+@media screen and (max-width: 800px) {
+    .hero__text {}
+
+    .hero__text-1 {}
+
+    .hero__text-2 {}
+
+    .hero__text-3 {}
 }

@@ -1,8 +1,7 @@
 .header {
     position: fixed;
-    width: 20vw;
-    height: auto;
-    top: 36px;
+    width: 200px;
+    height: 100vh;
     user-select: none;
     backface-visibility: hidden;
     z-index: 999;
@@ -15,4 +14,20 @@
     cursor: pointer;
     opacity: .3;
     text-align: left;
+}
+
+@media screen and (max-width: 800px) {
+    .header {
+        background: black;
+        transform: translate3d(-50%, -100%, 0);
+        left: 50%;
+        width: 80%;
+        height: 80%;
+    }
+}
+
+@keyframes textIn {
+    to {
+        transform: translate3d(0, 0, 0)
+    }
 }
