@@ -35,7 +35,8 @@ body {
 
 #coming-soon {
     overflow: visible;
-    animation: dance 4s ease-in-out infinite;
+    padding: 80px;
+    animation: dance 3s ease-in-out infinite;
 }
 
 @keyframes dance {
@@ -43,7 +44,19 @@ body {
         transform: rotate(0);
     }
 
-    20% {
+    10% {
+        transform: rotate(-5deg);
+    }
+
+    40% {
+        transform: rotate(370deg);
+    }
+
+    50% {
+        transform: rotate(360deg);
+    }
+
+    100% {
         transform: rotate(360deg);
     }
 }
