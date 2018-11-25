@@ -2,16 +2,12 @@
     font-size: 2em;
 }
 
-.text__medium__t-margin--header {
-    margin-top: .5em;
-}
-
 .text__jumbo {
     font-size: 10em;
 }
 
-.text__mada {
-    font-family: 'MadaBold', sans-serif;
+.text__mada-regular {
+    font-family: 'MadaBold', serif;
 }
 
 @media screen and (max-width: 1200px) {
@@ -28,6 +24,10 @@
 
 @media screen and (max-width: 800px) {
     .text__jumbo {
+        font-size: 4em;
+    }
+
+    .text__medium {
         font-size: 4em;
     }
 }

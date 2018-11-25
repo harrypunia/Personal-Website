@@ -10,7 +10,6 @@ body {
     width: 100vw;
     min-width: 480px;
     height: auto;
-    background: grey;
 }
 
 #canvas {
@@ -24,5 +23,29 @@ body {
     backface-visibility: hidden;
     z-index: -1;
     display: block;
-    vertical-align: bottom;
 }
+
+/*Coming soon CSS*/
+
+#body__coming-soon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#coming-soon {
+    overflow: visible;
+    animation: dance 4s ease-in-out infinite;
+}
+
+@keyframes dance {
+    0% {
+        transform: rotate(0);
+    }
+
+    20% {
+        transform: rotate(360deg);
+    }
+}
+
+/*Coming soon CSS*/

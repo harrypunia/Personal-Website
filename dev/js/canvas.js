@@ -1,8 +1,8 @@
-var particles = [],
+let particles = [],
     population = 50,
     chance = 150,
-    force = 20,
-    canvas;
+    force = 20;
+var canvas = sketch = document.getElementById('canvas');
 
 function setup() {
     canvas = createCanvas(window.innerWidth, window.innerHeight);
