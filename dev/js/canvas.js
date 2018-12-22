@@ -2,6 +2,8 @@ let particles = [],
     population = 50,
     chance = 150,
     resizing = true,
+    prevScrollPos = window.pageYOffset,
+    scrollModerator = 100,
     force = 20;
 var canvas = sketch = document.getElementById('canvas');
 
@@ -36,3 +38,12 @@ function windowResized() {
     resizing = false;
     resizeCanvas(windowWidth, windowHeight);
 }
+
+window.addEventListener("scroll", () => {
+    let forceDir = (prevScrollPos - window.pageYOffset) / scrollModerator,
+        force = createVector(0, forceDir);
+    for (let i = 0; i < particles.length; i++) {
+        particles[i].applyForce(force)
+    }
+    prevScrollPos = window.pageYOffset;
+})
