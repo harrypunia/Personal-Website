@@ -1,11 +1,3 @@
-window.addEventListener("scroll", () => {
-    let y = window.pageYOffset;
-});
-
-const loadSkill = e => {
-    let target = document.getElementById(e.currentTarget.id);
-}
-
 const openHeader = () => {
     let header = document.getElementsByClassName('header')[0],
         burger = document.getElementsByClassName('burger')[0];
@@ -22,7 +14,7 @@ const distortText = (where, what) => {
     for (let i = 0; i < str.length; i++) {
         delay = ((i / 10) / 2) + .2;
         char = (str[i] == "_") ? "&ensp;" : str[i];
-        result += '<div class="text__harry-all" style="animation: distort .4s cubic-bezier(0, .41, .21, 1.01); animation-fill-mode: forwards; animation-delay:' + delay + 's">' + char + '</div>';
+        result += '<div class="text__distort" style="animation: distort .4s cubic-bezier(0, .41, .21, 1.01); animation-fill-mode: forwards; animation-delay:' + delay + 's">' + char + '</div>';
     }
     typeof where == 'string' ? document.getElementById(where).innerHTML = result : document.getElementById(where.currentTarget.id).innerHTML = result;
 }

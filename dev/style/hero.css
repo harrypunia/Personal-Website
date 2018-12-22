@@ -22,7 +22,7 @@
     justify-content: center;
 }
 
-.text__harry-all {
+.text__distort {
     margin: 0 2px;
     opacity: 0;
     transform: matrix(1.3, 0, 0, 1, 40, 0);
