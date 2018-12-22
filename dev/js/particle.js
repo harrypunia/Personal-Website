@@ -38,6 +38,7 @@ Particle.prototype.airFriction = function () {
 Particle.prototype.applyForce = function (force) {
     this.acc.add(force);
 }
+
 Particle.prototype.boundry = function () {
     this.pos.x > window.innerWidth ? this.pos.x = 0 : 0;
     this.pos.x < 0 ? this.pos.x = window.innerWidth : 0;

@@ -3,7 +3,8 @@ let particles = [],
     chance = 150,
     resizing = true,
     prevScrollPos = window.pageYOffset,
-    scrollModerator = 100,
+    scrollModerator = 30,
+    scrollLimit = 5,
     force = 20;
 var canvas = sketch = document.getElementById('canvas');
 
@@ -40,8 +41,9 @@ function windowResized() {
 }
 
 window.addEventListener("scroll", () => {
-    let forceDir = (prevScrollPos - window.pageYOffset) / scrollModerator,
-        force = createVector(0, forceDir);
+    let forceDir = (prevScrollPos - window.pageYOffset) / scrollModerator;
+    forceDir > scrollLimit ? forceDir = scrollLimit : forceDir < -scrollLimit ? forceDir = -scrollLimit : 0;
+    let force = createVector(0, forceDir);
     for (let i = 0; i < particles.length; i++) {
         particles[i].applyForce(force)
     }
