@@ -5,6 +5,7 @@ let particles = [],
     prevScrollPos = window.pageYOffset,
     scrollModerator = 30,
     scrollLimit = 3,
+    once = true,
     force = 20;
 var canvas = sketch = document.getElementById('canvas');
 
@@ -14,7 +15,7 @@ function setup() {
     for (let i = 0; i < 50; i++) {
         particles[i] = new Particle(Math.random() * window.innerWidth, Math.random() * window.innerHeight);
     }
-    background(30, 36, 42);
+    background(0);
 }
 
 function draw() {
@@ -26,11 +27,13 @@ function draw() {
             particles[i].applyForce((Math.random() * force) - force / 2, (Math.random() * force) - force / 2)
         }
         for (let j = 0; j < particles.length; j++) {
+            once ? (particles[j].applyForce(createVector(-50, 0))) : 0;
             let gap = dist(particles[i].pos.x, particles[i].pos.y, particles[j].pos.x, particles[j].pos.y);
             if (Math.floor(gap) == 100 && i != j) {
                 particles[j].link(particles[i].pos.x, particles[i].pos.y, particles[j].pos.x, particles[j].pos.y);
             }
         }
+        once = false;
     }
     resizing = true;
 }
