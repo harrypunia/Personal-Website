@@ -19,6 +19,7 @@ const distortText = (where, what) => {
         distortHTML += '<div style="opacity:' + opacity + '; animation: ' + what.type + ' ' + duration + 's ' + bezier + '; animation-fill-mode: forwards; animation-delay:' + delay + 's">' + str + '</div>';
     }
     document.getElementById(where).innerHTML = distortHTML;
+    document.getElementById(where).style.cssText = 'display: flex; justify-content: center';
 }
 
 window.addEventListener("load", () => {
