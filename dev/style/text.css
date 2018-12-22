@@ -1,3 +1,7 @@
+.define-text {
+    line-height: 1.5em;
+}
+
 .text__small {
     font-size: 1.6em;
 }
@@ -10,31 +14,23 @@
     font-size: 4em;
 }
 
-.text__jumbo {
-    font-size: 5em;
+.text__xlarge {
+    font-size: 6em;
 }
 
-.text__mada-regular {
-    font-family: 'MadaBold', serif;
+.text__mada {
+    font-family: 'mada', serif;
 }
 
-@media screen and (max-width: 1200px) {
-    .text__jumbo {
-        font-size: 8em;
-    }
+.text__cinzel {
+    font-family: 'cinzel', serif;
 }
 
-@media screen and (max-width: 1000px) {
-    .text__jumbo {
-        font-size: 6em;
-    }
-}
+@media screen and (max-width: 1200px) {}
+
+@media screen and (max-width: 1000px) {}
 
 @media screen and (max-width: 800px) {
-    .text__jumbo {
-        font-size: 4em;
-    }
-
     .text__medium {
         font-size: 4em;
     }

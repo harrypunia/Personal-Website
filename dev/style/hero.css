@@ -6,13 +6,7 @@
     min-height: 800px;
 }
 
-.text__harry-all {
-    margin: 0 5px;
-    opacity: 0;
-    transform: matrix(1.15, 0, 0, 1.15, 20, 0);
-}
-
-.text__harry {
+.hero__text {
     position: absolute;
     left: 50vw;
     top: 50vh;
@@ -20,6 +14,18 @@
     display: flex;
     justify-content: center;
     text-align: center;
+    flex-direction: column;
+}
+
+.hero__text-lines {
+    display: flex;
+    justify-content: center;
+}
+
+.text__harry-all {
+    margin: 0 2px;
+    opacity: 0;
+    transform: matrix(1.5, 0, 0, 1, 40, 0);
 }
 
 .text__harry-h {
