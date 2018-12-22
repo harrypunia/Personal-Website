@@ -54,7 +54,6 @@ body {
 #body__coming-soon {
     display: flex;
     justify-content: center;
-    height: 5000px;
     align-items: center;
 }
 

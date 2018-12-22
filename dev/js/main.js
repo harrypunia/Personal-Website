@@ -1,3 +1,5 @@
+let fadeScroll = document.getElementsByClassName('fade_scroll');
+
 const openHeader = () => {
     let header = document.getElementsByClassName('header')[0],
         burger = document.getElementsByClassName('burger')[0];
@@ -20,7 +22,7 @@ const distortText = (where, what) => {
     }
     document.getElementById(where).innerHTML = distortHTML;
     document.getElementById(where).style.cssText = 'display: flex; justify-content: center';
-} 
+}
 
 window.addEventListener("load", () => {
     distortText('test', {
@@ -42,3 +44,13 @@ window.addEventListener("load", () => {
         duration: .4
     });
 });
+
+window.addEventListener("scroll", () => {
+    'use strict';
+    for (let i = 0; i < fadeScroll.length; i++) {
+        let _opacity = (((fadeScroll[i].offsetTop - window.pageYOffset) + (fadeScroll[i].offsetHeight / 2)) / window.innerHeight * 2),
+            opacity = _opacity > 1 ? 1 - _opacity : _opacity > 2 ? 2 : _opacity;
+        fadeScroll[i].style.opacity = opacity;
+        i == 2 ? console.log(opacity) : 0;
+    }
+})
