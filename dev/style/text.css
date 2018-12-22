@@ -22,6 +22,11 @@
     font-family: 'mada', serif;
 }
 
+.text__mada-bold {
+    font-family: 'mada', serif;
+    font-weight: bold;
+}
+
 .text__cinzel {
     font-family: 'cinzel', serif;
 }

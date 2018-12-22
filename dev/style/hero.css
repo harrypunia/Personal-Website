@@ -58,6 +58,36 @@
     animation-delay: 0.4s;
 }
 
+.text__harry-p {
+    animation: distort .4s cubic-bezier(0, .41, .21, 1.01);
+    animation-fill-mode: forwards;
+    animation-delay: 0.45s;
+}
+
+.text__harry-u {
+    animation: distort .4s cubic-bezier(0, .41, .21, 1.01);
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+}
+
+.text__harry-n {
+    animation: distort .4s cubic-bezier(0, .41, .21, 1.01);
+    animation-fill-mode: forwards;
+    animation-delay: 0.55s;
+}
+
+.text__harry-i {
+    animation: distort .4s cubic-bezier(0, .41, .21, 1.01);
+    animation-fill-mode: forwards;
+    animation-delay: 0.6s;
+}
+
+.text__harry-a2 {
+    animation: distort .4s cubic-bezier(0, .41, .21, 1.01);
+    animation-fill-mode: forwards;
+    animation-delay: 0.65s;
+}
+
 @keyframes distort {
     to {
         transform: matrix(1, 0, 0, 1, 0, 0);
