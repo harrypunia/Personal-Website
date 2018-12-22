@@ -1,3 +1,7 @@
+var r,
+    g = 0,
+    b;
+
 function Particle(posX, posY) {
     this.pos = createVector(posX, posY);
     this.vel = createVector(Math.random() - 0.5, Math.random() - 0.5);
@@ -6,10 +10,16 @@ function Particle(posX, posY) {
     this.show = function () {
         noFill();
         strokeWeight(4);
-        stroke(255, 0, 150, 100);
         point(this.pos.x, this.pos.y);
     }
     this.update = function () {
+        r = 255 - window.pageYOffset / 5;
+        b = window.pageYOffset / 8;
+        if (window.pageYOffset > 1200) {
+            r < 1 ? r = 0 : 0;
+            b > 254 ? b = 255 : 0;
+        }
+        stroke(r, g, b);
         this.vel.add(this.acc);
         this.pos.add(this.vel);
         this.acc.mult(0);
