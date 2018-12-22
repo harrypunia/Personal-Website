@@ -13,9 +13,9 @@ function Particle(posX, posY) {
         point(this.pos.x, this.pos.y);
     }
     this.update = function () {
-        r = 255 - window.pageYOffset / 5;
+        r = 255 - window.pageYOffset / 8;
         b = window.pageYOffset / 8;
-        if (window.pageYOffset > 1200) {
+        if (window.pageYOffset > 2000) {
             r < 1 ? r = 0 : 0;
             b > 254 ? b = 255 : 0;
         }

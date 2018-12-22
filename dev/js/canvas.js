@@ -1,20 +1,21 @@
 let particles = [],
     population = 50,
     chance = 150,
+    resizing = true,
     force = 20;
 var canvas = sketch = document.getElementById('canvas');
 
 function setup() {
-    canvas = createCanvas(window.innerWidth, window.innerHeight);
+    canvas = createCanvas(window.innerWidth, window.innerHeight, P2D);
     canvas.parent(sketch);
     for (let i = 0; i < 50; i++) {
         particles[i] = new Particle(Math.random() * window.innerWidth, Math.random() * window.innerHeight);
     }
-    background(20, 20, 30);
+    background(30, 36, 42);
 }
 
 function draw() {
-    background(20, 20, 30, 15);
+    resizing ? background(30, 36, 42, 70) : background(30, 36, 42);
     for (let i = 0; i < particles.length; i++) {
         particles[i].update();
         particles[i].show();
@@ -28,8 +29,10 @@ function draw() {
             }
         }
     }
+    resizing = true;
 }
 
-window.onresize = function () {
-    canvas.size(window.innerWidth, window.innerHeight);
+function windowResized() {
+    resizing = false;
+    resizeCanvas(windowWidth, windowHeight);
 }

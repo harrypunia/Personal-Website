@@ -29,6 +29,7 @@ body {
 
 #body__coming-soon {
     display: flex;
+    height: 5000px;
     justify-content: center;
     align-items: center;
 }
