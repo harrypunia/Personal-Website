@@ -5,3 +5,57 @@
     height: 100vh;
     min-height: 800px;
 }
+
+.text__harry-all {
+    margin: 0 5px;
+    opacity: 0;
+    transform: matrix(1.15, 0, 0, 1.15, 20, 0);
+}
+
+.text__harry {
+    position: absolute;
+    left: 50vw;
+    top: 50vh;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.text__harry-h {
+    animation: distort .4s cubic-bezier(0, .41, .21, 1.01);
+    animation-fill-mode: forwards;
+    animation-delay: 0.2s;
+}
+
+.text__harry-a {
+    animation: distort .4s cubic-bezier(0, .41, .21, 1.01);
+    animation-fill-mode: forwards;
+    animation-delay: 0.25s;
+}
+
+.text__harry-r {
+    animation: distort .4s cubic-bezier(0, .41, .21, 1.01);
+    animation-fill-mode: forwards;
+    animation-delay: 0.3s;
+}
+
+.text__harry-r2 {
+    animation: distort .4s cubic-bezier(0, .41, .21, 1.01);
+    animation-fill-mode: forwards;
+    animation-delay: 0.35s;
+}
+
+.text__harry-y {
+    animation: distort .4s cubic-bezier(0, .41, .21, 1.01);
+    animation-fill-mode: forwards;
+    animation-delay: 0.4s;
+}
+
+@keyframes distort {
+    to {
+        transform: matrix(1, 0, 0, 1, 0, 0);
+        color: white;
+        opacity: 1;
+    }
+}

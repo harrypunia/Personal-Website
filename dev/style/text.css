@@ -1,9 +1,17 @@
+.text__small {
+    font-size: 1.6em;
+}
+
 .text__medium {
     font-size: 2em;
 }
 
+.text__large {
+    font-size: 4em;
+}
+
 .text__jumbo {
-    font-size: 10em;
+    font-size: 5em;
 }
 
 .text__mada-regular {

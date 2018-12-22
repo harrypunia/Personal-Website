@@ -47,3 +47,9 @@ function Particle(posX, posY) {
         line(x1, y1, x2, y2);
     }
 }
+
+Particle.prototype.show = function () {
+    noFill();
+    strokeWeight(4);
+    point(this.pos.x, this.pos.y);
+}
