@@ -4,7 +4,7 @@ let particles = [],
     resizing = true,
     prevScrollPos = window.pageYOffset,
     scrollModerator = 20,
-    scrollLimit = 2,
+    scrollLimit = 10,
     once = true,
     force = 20;
 var canvas = sketch = document.getElementById('canvas');
