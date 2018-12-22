@@ -6,6 +6,7 @@ function Particle(posX, posY) {
     this.pos = createVector(posX, posY);
     this.vel = createVector(Math.random() - 0.5, Math.random() - 0.5);
     this.acc = createVector(0, 0);
+    this.maxSpeed = 10;
 }
 
 Particle.prototype.show = function () {
@@ -22,6 +23,7 @@ Particle.prototype.update = function () {
         b > 254 ? b = 255 : 0;
     }
     stroke(r, g, b);
+    this.vel.y > this.maxSpeed ? this.vel.y = this.maxSpeed : this.vel.y < -this.maxSpeed ? this.vel.y = -this.maxSpeed : 0;
     this.vel.add(this.acc);
     this.pos.add(this.vel);
     this.acc.mult(0);

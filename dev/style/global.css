@@ -4,6 +4,7 @@ body {
     font-size: 62.5%;
     color: #efefef;
     width: 100vw;
+    height: auto;
 }
 
 .container {
@@ -29,9 +30,9 @@ body {
 
 #body__coming-soon {
     display: flex;
-    height: 5000px;
     justify-content: center;
     align-items: center;
+    height: 2000px;
 }
 
 #coming-soon {

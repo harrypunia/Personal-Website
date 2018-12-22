@@ -29,7 +29,7 @@ const distortText = (where, what) => {
 
 window.addEventListener("load", () => {
     distortText('test', {
-        msg: 'Hello_there'
+        msg: 'Hello_there._Call_me'
     });
     distortText('test2', {
         msg: 'Harry_Punia'
