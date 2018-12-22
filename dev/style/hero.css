@@ -124,7 +124,7 @@
     animation-delay: 0.95s;
 }
 
-.hero__text-lines div:nth-child(16) {
+.hero__text-lines div:nth-child(17) {
     animation: distort .4s cubic-bezier(0, .41, .21, 1.01);
     animation-fill-mode: forwards;
     animation-delay: 0.1s;
