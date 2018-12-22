@@ -20,7 +20,7 @@ const distortText = (where, what) => {
     }
     document.getElementById(where).innerHTML = distortHTML;
     document.getElementById(where).style.cssText = 'display: flex; justify-content: center';
-}
+} 
 
 window.addEventListener("load", () => {
     distortText('test', {
