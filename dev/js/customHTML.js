@@ -1,4 +1,4 @@
-class AppButton extends HTMLElement {
+class DefineButton extends HTMLElement {
     get open() {
         return this.hasAttribute('open');
     }
@@ -39,4 +39,4 @@ class AppButton extends HTMLElement {
     }
 }
 
-window.customElements.define('app-button', AppButton);
+window.customElements.define('define-button', DefineButton);
