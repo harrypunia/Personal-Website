@@ -1,12 +1,3 @@
-let particles = [],
-    population = 50,
-    chance = 150,
-    resizing = true,
-    prevScrollPos = window.pageYOffset,
-    scrollModerator = 20,
-    scrollLimit = 10,
-    once = true,
-    force = 20;
 var canvas = sketch = document.getElementById('canvas');
 
 function setup() {
