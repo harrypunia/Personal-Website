@@ -33,23 +33,21 @@
                 </div>
             </div>
         </div>
-        <div class="hero fade_scroll">
+        <fade-scroll class="hero">
             <div class="wrapper">
                 <div class="hero__text">
-                    <div id="test" class="hero__text-line-1 hero__text-lines define-text text__medium text__mada"></div>
-                    <div id="test2" class="hero__text-line-1 hero__text-lines define-text text__xlarge text__cinzel"></div>
-                    <div id="test3" class="hero__text-line-1 hero__text-lines define-text text__medium text__mada"></div>
+                    <distort-text id="test" class="hero__text-line-1 hero__text-lines define-text text__medium text__mada"></distort-text>
+                    <distort-text id="test2" class="hero__text-line-1 hero__text-lines define-text text__xlarge text__cinzel"></distort-text>
+                    <distort-text id="test3" class="hero__text-line-1 hero__text-lines define-text text__medium text__mada"></distort-text>
                 </div>
             </div>
-        </div>
-        <div id="body__coming-soon" class="body fade_scroll">
+        </fade-scroll>
+        <fade-scroll id="body__coming-soon" class="body">
             <div class="wrapper">
                 <h2 id="coming-soon" class="text__mada-regular text__medium">Coming Soon</h2>
             </div>
-        </div>
-        <div class="footer fade_scroll">
-            <define-button class="wrapper">Hi</define-button>
-        </div>
+        </fade-scroll>
+        <div class="footer"></div>
     </div>
     <script src="dev/js/call.js"></script>
     <script src="dev/js/particle.js"></script>
@@ -58,5 +56,3 @@
 </body>
 
 </html>
-
-<!--distortText('id' {msg: 'message', delay: n, duration: n, speed: n, type: 'distort_in/distort_out'})-->

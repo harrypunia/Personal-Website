@@ -1,42 +1,23 @@
-class DefineButton extends HTMLElement {
-    get open() {
-        return this.hasAttribute('open');
-    }
-
-    set open(val) {
-        if (val) {
-            this.setAttribute('open', '');
-        } else {
-            this.removeAttribute('open');
-        }
-        this.toggleDrawer();
-    }
-
-    get disabled() {
-        return this.hasAttribute('disabled');
-    }
-
-    set disabled(val) {
-        if (val) {
-            this.setAttribute('disabled', '');
-        } else {
-            this.removeAttribute('disabled');
-        }
-    }
-
+class FadeScroll extends HTMLElement {
     constructor() {
         super();
-        this.addEventListener('click', e => {
-            if (this.disabled) {
-                return;
-            }
-            this.toggleDrawer();
+        window.addEventListener('scroll', () => {
+            this.fade();
         });
     }
+    fade() {
+        this._opacity = (((this.offsetTop - window.pageYOffset) + (this.offsetHeight / 2)) / window.innerHeight * 2);
+        this.opacity = this._opacity < 0 ? 0 : this._opacity > 1 ? 2 - this._opacity : this._opacity;
+        this.style.opacity = this.opacity;
+    }
+}
+window.customElements.define('fade-scroll', FadeScroll);
 
-    toggleDrawer() {
-        console.log('yay');
+
+class DistortText extends HTMLElement {
+    constructor() {
+
     }
 }
 
-window.customElements.define('define-button', DefineButton);
+window.CustomElements.define('define-text', DefineText);

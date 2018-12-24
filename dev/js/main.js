@@ -44,12 +44,3 @@ window.addEventListener("load", () => {
         duration: .4
     });
 });
-
-window.addEventListener("scroll", () => {
-    'use strict';
-    for (let i = 0; i < fadeScroll.length; i++) {
-        let _opacity = (((fadeScroll[i].offsetTop - window.pageYOffset) + (fadeScroll[i].offsetHeight / 2)) / window.innerHeight * 2),
-            opacity = _opacity < 0 ? 0 : _opacity > 1 ? 2 - _opacity : _opacity;
-        fadeScroll[i].style.opacity = opacity;
-    }
-})

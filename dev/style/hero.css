@@ -1,6 +1,5 @@
 .hero {
-    position: relative;
-    will-change: background-size, filter;
+    will-change: opacity;
     width: 100%;
     height: 100vh;
     min-height: 800px;
