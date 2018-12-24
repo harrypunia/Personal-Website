@@ -22,17 +22,16 @@ class DistortText extends HTMLElement {
     connectedCallback() {
         this.text = this.getAttribute('text');
         this.delay = this.getAttribute('delay');
+        this.speed = this.getAttribute('speed');
         this.hasAttribute('onload') ? this.distortText(this.text) : 0;
     }
     distortText() {
         for (let i = 0; i < this.text.length; i++) {
-            let delay = (i / 2) + parseInt(this.delay, 10),
+            let delay = (i / parseInt(this.speed) / 2) + parseFloat(this.delay, 10),
                 str = this.text[i].replace('_', '&ensp;');
-            console.log(typeof this.delay)
             this.letters += '<div style="opacity: 0; animation: distort_in .2s ease-out; animation-fill-mode: forwards; animation-delay:' + delay + 's">' + str + '</div>'
         }
         this.innerHTML = this.letters;
-        //'<div style="opacity:' + opacity + '; animation: ' + what.type + ' ' + duration + 's ' + bezier + '; animation-fill-mode: forwards; animation-delay:' + delay + 's">' + str + '</div>';
     }
 }
 

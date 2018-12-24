@@ -31,6 +31,12 @@ fade-scroll {
     position: relative;
 }
 
+distort-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /*[DELETE] Coming soon CSS*/
 
 #body__coming-soon {
