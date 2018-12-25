@@ -19,19 +19,22 @@ class DistortText extends HTMLElement {
         super();
     }
     connectedCallback() {
+        this.updateParameters();
+        this.hasAttribute('onload') ? this.distortText() : this.hasAttribute('onclick') ? this.addEventListener('click', this.distortText) : 0;
+    }
+    updateParameters() {
         this.text = this.getAttribute('text');
         this.animation = this.getAttribute('dir');
         this.opacity = this.animation == 'in' ? 0 : 1;
         this.delay = this.hasAttribute('delay') ? this.getAttribute('delay') : 0.2;
         this.speed = this.hasAttribute('speed') ? this.getAttribute('speed') : this.text.length;
-        this.hasAttribute('onload') ? this.distortText() : this.hasAttribute('onclick') ? this.addEventListener('click', this.distortText) : 0;
     }
     static get observedAttributes() {
-        return ['exit']
+        return ['dir']
     }
     attributeChangedCallback(name, oldValue, newValue) {
         if (oldValue != newValue) {
-            newValue == "true" ? (this.animation = 'out', this.opacity = 1, this.distortText()) : (this.animation = 'in', this.opacity = 0, this.distortText());
+            newValue == "true" ? (this.updateParameters(), this.distortText()) : (this.updateParameters(), this.distortText());
         }
     }
     distortText() {

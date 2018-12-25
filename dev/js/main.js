@@ -1,20 +1,32 @@
-const openHeader = () => {
+const openHeader = (reset) => {
     let header = document.getElementsByClassName('header')[0],
         burger = document.getElementsByClassName('burger')[0];
 
-    headerIsOpen ? (header.classList.remove('openHeader'), headerIsOpen = false, burger.classList.remove('convertBurger')) : (header.classList.add('openHeader'), headerIsOpen = true, burger.classList.add('convertBurger'));
+    if (reset == 'reset') {
+        toggleDistortedText();
+        header.classList.remove('openHeader');
+        headerIsOpen = false;
+        burger.classList.remove('convertBurger')
+    } else {
+        headerIsOpen ? (header.classList.remove('openHeader'), headerIsOpen = false, burger.classList.remove('convertBurger')) : (header.classList.add('openHeader'), headerIsOpen = true, burger.classList.add('convertBurger'));
+    }
 }
 
-const hideAllDistortedText = () => {
+const toggleDistortedText = () => {
     let test = document.getElementsByTagName('distort-text');
     for (let i = 0; i < test.length; i++) {
-        let exit = test[i].getAttribute('exit');
-        if (exit == null || exit == "false") {
+        if (test[i].getAttribute('dir') == 'in') {
             test[i].setAttribute('delay', 0);
-            test[i].setAttribute('exit', true);
+            test[i].setAttribute('dir', 'out');
         } else {
             test[i].setAttribute('delay', 0.2);
-            test[i].setAttribute('exit', false);
+            test[i].setAttribute('dir', 'in');
         }
+    }
+}
+
+window.onresize = () => {
+    if (headerIsOpen) {
+        (window.innerWidth >= 800) ? openHeader('reset'): 0;
     }
 }
