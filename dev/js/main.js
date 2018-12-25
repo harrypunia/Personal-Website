@@ -31,9 +31,7 @@ window.onresize = () => {
     }
 }
 
-const scrollToTarget = _target => {
-    target = document.getElementById(_target);
-    targetY = (target.offsetTop - window.pageYOffset / 2) + (target.offsetHeight / 2);
-    far = targetY;
-    scroll();
-}
+document.getElementById('test').addEventListener("click", () => {
+    zenscroll.center(document.getElementById('footer'));
+    console.log('test');
+});

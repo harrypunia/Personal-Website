@@ -28,14 +28,14 @@
     <title>Harry Punia</title>
 </head>
 
-<body>
+<body class="smooth-container">
     <div id="canvas"></div>
     <div class="container">
         <div class="burger" onclick="openHeader(); toggleDistortedText()"></div>
         <header class="header">
             <div class="wrapper text__medium define-text text__mada">
                 <div class="header__elements">
-                    <p class="distort_hover">Case Studies</p>
+                    <p id='test' class="distort_hover">Case Studies</p>
                 </div>
                 <div class="header__elements">
                     <p class="distort_hover">Contact</p>
@@ -63,6 +63,10 @@
             </div>
         </fade-scroll>
     </div>
+    <script>
+        window.noZensmooth = true
+    </script>
+    <script src="lib/zenscroll.min.js"></script>
     <script src="dev/js/call.js"></script>
     <script src="dev/js/particle.js"></script>
     <script src="dev/js/canvas.js"></script>
