@@ -35,10 +35,10 @@
         <header class="header">
             <div class="wrapper text__medium define-text text__mada">
                 <div class="header__elements">
-                    <div onclick dir="out" speed="40" delay=0 text="Work" delay=0 speed="20" id="work" class="distort_hover">Work</div>
+                    <p class="distort_hover" onclick="scrollToTarget('caseStudies')">Case Studies</p>
                 </div>
                 <div class="header__elements">
-                    <p id="contact" class="distort_hover">Contact</p>
+                    <p class="distort_hover" onclick="scrollToTarget('contact')">Contact</p>
                 </div>
             </div>
         </header>
@@ -54,9 +54,14 @@
         <fade-scroll id="body__coming-soon" class="body">
             <div class="wrapper">
                 <h2 id="coming-soon" class="text__mada-regular text__medium">Coming Soon</h2>
+                <div id="caseStudies"></div>
             </div>
         </fade-scroll>
-        <div class="footer"></div>
+        <fade-scroll class="footer">
+            <div class="wrapper">
+                <div id="contact"></div>
+            </div>
+        </fade-scroll>
     </div>
     <script src="dev/js/call.js"></script>
     <script src="dev/js/particle.js"></script>

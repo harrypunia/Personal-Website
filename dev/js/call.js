@@ -9,9 +9,8 @@ let headerIsOpen = false,
     once = true,
     force = 20;
 
-//console.log('%c Have a good day :)', 'background: #333; text-align: center; width: 100%; color: #fff; padding:5px 10px;');
-console.log('%c GitHub: https://github.com/harrypunia ', 'background: #efefef; text-align: center; width: 100%; color: #333; padding:5px 10px;');
-console.log('%c Instagram: https://www.instagram.com/puniaharsimran ', 'background: #efefef; text-align: center; width: 100%; color: #333; padding:5px 10px;');
-console.log('%c LinkedIn:https://www.linkedin.com/in/harry-punia-904590130/ ', 'background: #efefef; text-align: center; width: 100%; color: #333; padding:5px 10px;');
-//console.log('%c Dribble: https://github.com/harrypunia ', 'background: #efefef; text-align: center; width: 100%; color: #333; padding:5px 10px;');
-console.log('%c Email: harry@punias.com', 'background: #efefef; text-align: center; width: 100%; color: #333; padding:5px 10px;');
+console.log('%cGitHub: https://github.com/harrypunia                       ', 'background: #efefef; width: 100%; color: #333; padding:5px 10px;');
+console.log('%cInstagram: https://www.instagram.com/puniaharsimran         ', 'background: #efefef; width: 100%; color: #333; padding:5px 10px;');
+console.log('%cLinkedIn:https://www.linkedin.com/in/harry-punia-904590130/ ', 'background: #efefef; width: 100%; color: #333; padding:5px 10px;');
+//console.log('%c Dribble: https://github.com/harrypunia ', 'background: #efefef; width: 100%; color: #333; padding:5px 10px;');
+console.log('%cEmail: harry@punias.com                                     ', 'background: #efefef; width: 100%; color: #333; padding:5px 10px;');

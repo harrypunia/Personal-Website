@@ -30,3 +30,31 @@ window.onresize = () => {
         (window.innerWidth >= 800) ? openHeader('reset'): 0;
     }
 }
+
+let targetY,
+    targetId,
+    vel = 0,
+    acc = .2,
+    far = 0;
+
+const scrollToTarget = _target => {
+    targetId = document.getElementById(_target);
+    targetY = targetId.offsetTop - window.pageYOffset;
+    far = targetY;
+    scroll();
+}
+
+const scroll = () => {
+    targetY = targetId.offsetTop - window.pageYOffset;
+    if (targetY >= 5 || targetY <= -5) {
+        //vel >= 20 ? vel = 20 : 0;
+        targetY > far / 2 ? vel += acc : vel -= acc;
+        targetY < -far / 2 ? vel -= acc : vel += acc;
+        console.log(vel, far, targetY);
+        targetY < 0 ? window.scrollBy(0, -vel) : window.scrollBy(0, vel);
+        requestAnimationFrame(scroll)
+    } else {
+        cancelAnimationFrame(scroll);
+        vel = 0;
+    }
+}
