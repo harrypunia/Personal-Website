@@ -31,7 +31,7 @@ class DistortText extends HTMLElement {
     }
     attributeChangedCallback(name, oldValue, newValue) {
         if (oldValue != newValue) {
-            newValue == "true" ? (this.animation = 'out', this.opacity = this.animation == 'in' ? 0 : 1, this.distortText()) : 0;
+            newValue == "true" ? (this.animation = 'out', this.opacity = 1, this.distortText()) : (this.animation = 'in', this.opacity = 0, this.distortText());
         }
     }
     distortText() {

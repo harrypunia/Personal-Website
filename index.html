@@ -22,8 +22,8 @@
 <body>
     <div id="canvas"></div>
     <div class="container">
-        <div class="burger" onclick="openHeader()"></div>
-        <div class="header">
+        <div class="burger" onclick="openHeader(); hideAllDistortedText()"></div>
+        <header class="header">
             <div class="wrapper text__medium define-text text__mada">
                 <div class="header__elements">
                     <div onclick dir="out" speed="40" delay=0 text="Work" delay=0 speed="20" id="work" class="distort_hover">Work</div>
@@ -32,11 +32,11 @@
                     <p id="contact" class="distort_hover">Contact</p>
                 </div>
             </div>
-        </div>
+        </header>
         <fade-scroll class="hero">
             <div class="wrapper">
                 <div class="hero__text">
-                    <distort-text onload dir="in" exit=false text="You_can_call_me" id="hey" class="define-text text__medium text__mada"></distort-text>
+                    <distort-text onload dir="in" text=" You_can_call_me" id="hey" class="define-text text__medium text__mada"></distort-text>
                     <distort-text onload dir="in" text="Harry_Punia" class="define-text text__xlarge text__cinzel"></distort-text>
                     <distort-text onload dir="in" text="Designer_•_Developer" class="define-text text__medium text__mada"></distort-text>
                 </div>
