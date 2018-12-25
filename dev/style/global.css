@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -5,6 +9,11 @@ body {
     color: #efefef;
     width: 100vw;
     height: auto;
+}
+
+a {
+    color: white;
+    text-decoration: none;
 }
 
 .container {
@@ -39,11 +48,6 @@ distort-text {
 
 /*[DELETE] Coming soon CSS*/
 
-#body__coming-soon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 #coming-soon {
     overflow: visible;
