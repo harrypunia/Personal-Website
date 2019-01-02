@@ -14,7 +14,6 @@ a {
 
 .container {
     width: 100vw;
-    min-width: 480px;
     height: auto;
 }
 
@@ -41,36 +40,3 @@ distort-text {
     justify-content: center;
     align-items: center;
 }
-
-/*[DELETE] Coming soon CSS*/
-
-
-#coming-soon {
-    overflow: visible;
-    padding: 80px;
-    animation: dance 3s ease-in-out infinite;
-}
-
-@keyframes dance {
-    0% {
-        transform: rotate(0);
-    }
-
-    10% {
-        transform: rotate(-5deg);
-    }
-
-    40% {
-        transform: rotate(370deg);
-    }
-
-    50% {
-        transform: rotate(360deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-/*[DELETE] Coming soon CSS*/

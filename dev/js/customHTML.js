@@ -50,23 +50,62 @@ class DistortText extends HTMLElement {
 
 window.customElements.define('distort-text', DistortText);
 
-class HeaderElement extends HTMLElements {
+class HeaderElement extends HTMLElement {
     constructor() {
         super();
-        let shadow = this.attachShadow({
-                mode: 'open'
-            }),
+        this.shadow = this.attachShadow({
+            mode: 'open'
+        });
+
+    }
+    connectedCallback() {
+        let wrapper = document.createElement('wrapper'),
             text = document.createElement('p'),
             _text = this.getAttribute('text'),
-            css = document.createElement('css');
+            css = document.createElement('style');
         text.textContent = _text;
-        text.setAttribute('class', 'distort__hover');
-        shadow.setAttribute('class', 'header__elements');
-        css.textContent = '.header__elements {display: flex;flex-direction: column;align-items: flex-start;margin-top: .5em} @media screen and (max-width: 800px) {.header__elements {text-align: center;align-items: center;}}';
-        shadow.appendChild(css);
-        shadow.appendChild(text);
+        text.setAttribute('class', 'header__element-text');
+        wrapper.setAttribute('class', 'header__element');
+        css.textContent = '.header__element {display: flex;flex-direction: column;align-items: flex-start;margin-top: .5em}' +
+            '.header__element-text {transform: matrix(1, 0, 0, 1, 0, 0);opacity: .3;transition: all .2s ease-in-out;cursor: pointer}' +
+            '.header__element-text:hover {transform: matrix(1.2, 0, 0, 1, 7, 0); opacity: 1;transition: all .2 s ease - in -out}' +
+            '@media screen and (max-width: 800px) {' +
+            '.header__element {text-align: center;align-items: center}' +
+            '.header__element-text {opacity: 1}' +
+            '.header__element-text: hover {transform: matrix(1, 0, 0, 1, 0, 0)}' +
+            '.header__element-text:focus {}' +
+            '}';
+        this.shadow.appendChild(css);
+        this.shadow.appendChild(wrapper);
+        wrapper.appendChild(text);
     }
-
 }
 
-window.customeElements.define('header-element', HeaderElement)
+window.customElements.define('header-element', HeaderElement);
+
+class HrText extends HTMLElement {
+    constructor() {
+        super();
+        this.shadow = this.attachShadow({
+            mode: 'open'
+        })
+    }
+    connectedCallback() {
+        let wrapper = document.createElement('wrapper'),
+            text = document.createElement('p'),
+            _text = this.getAttribute('text'),
+            leftHr = document.createElement('hr'),
+            rightHr = document.createElement('hr'),
+            css = document.createElement('style');
+        wrapper.setAttribute('class', 'hr-text');
+        css.textContent = '.hr-text {width: 100%; height: 10px; background: blue}';
+        text.textContent = _text;
+        this.shadow.appendChild(css);
+        this.shadow.appendChild(wrapper);
+        wrapper.appendChild(leftHr);
+        wrapper.appendChild(text);
+        wrapper.appendChild(rightHr);
+    }
+}
+
+window.customeElement.define('hr-text', HrText);
