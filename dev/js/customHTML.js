@@ -49,3 +49,24 @@ class DistortText extends HTMLElement {
 }
 
 window.customElements.define('distort-text', DistortText);
+
+class HeaderElement extends HTMLElements {
+    constructor() {
+        super();
+        let shadow = this.attachShadow({
+                mode: 'open'
+            }),
+            text = document.createElement('p'),
+            _text = this.getAttribute('text'),
+            css = document.createElement('css');
+        text.textContent = _text;
+        text.setAttribute('class', 'distort__hover');
+        shadow.setAttribute('class', 'header__elements');
+        css.textContent = '.header__elements {display: flex;flex-direction: column;align-items: flex-start;margin-top: .5em} @media screen and (max-width: 800px) {.header__elements {text-align: center;align-items: center;}}';
+        shadow.appendChild(css);
+        shadow.appendChild(text);
+    }
+
+}
+
+window.customeElements.define('header-element', HeaderElement)

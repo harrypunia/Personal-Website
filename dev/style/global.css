@@ -1,12 +1,10 @@
-body,
-.smooth-container {
-    margin: 0;
-    padding: 0;
+body {
+    margin: 0px;
+    padding: 0px;
     font-size: 62.5%;
     color: #efefef;
     width: 100vw;
     height: auto;
-    /*    scroll-behavior: smooth;*/
 }
 
 a {

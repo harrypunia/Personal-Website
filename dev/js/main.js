@@ -30,8 +30,3 @@ window.onresize = () => {
         (window.innerWidth >= 800) ? openHeader('reset'): 0;
     }
 }
-
-document.getElementById('test').addEventListener("click", () => {
-    zenscroll.center(document.getElementById('footer'));
-    console.log('test');
-});
