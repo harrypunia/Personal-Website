@@ -101,12 +101,14 @@ class HrText extends HTMLElement {
         wrapper.setAttribute('class', 'hr-wrapper');
         leftHr.setAttribute('class', 'hr-line');
         rightHr.setAttribute('class', 'hr-line');
-        bottomHr.setAttribute('class', 'hr-bottom')
+        bottomHr.setAttribute('class', 'hr-bottom');
         css.textContent = '.hr-wrapper { width: 80vw; height: 50px; margin: 0 auto; display: flex; flex-direction: row; justify-content: center; align-items: center}' +
-            '.hr-bottom{display: none;  width: 80vw; border: 0; height: 1px; background: white}' +
-            '.hr-line {display: block; border: 0; height: 1px; background: white; width: 33%}' +
+            '.hr-bottom{display: none;  width: 80vw; border: 0; height: 1px; background: white; margin: 0 auto}' +
+            '.hr-line {display: block; border: 0; height: 1px; background: white; width: 33%; margin: 0 auto}' +
+            'p {margin: 0}' +
             '@media screen and (max-width: 800px) {' +
-            '.hr-wrapper{flex-direction: column}' +
+            'p {margin: 0 0 6px 0;}' +
+            '.hr-wrapper{flex-direction: column; justify-content: center; align-items: center}' +
             '.hr-line {display: none}' +
             '.hr-bottom {display: block}' +
             '}';
