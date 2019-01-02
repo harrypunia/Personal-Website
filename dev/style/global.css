@@ -5,6 +5,7 @@ body {
     color: #efefef;
     width: 100vw;
     height: auto;
+    overflow-x: hidden;
 }
 
 a {
@@ -39,4 +40,10 @@ distort-text {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+hr {
+    height: 1px;
+    border: 0;
+    background: white;
 }

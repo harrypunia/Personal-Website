@@ -31,7 +31,7 @@ function draw() {
 
 function windowResized() {
     resizing = false;
-    resizeCanvas(windowWidth, windowHeight);
+    resizeCanvas(window.innerWidth, window.innerHeight);
 }
 
 window.addEventListener("scroll", () => {

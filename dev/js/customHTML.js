@@ -59,7 +59,7 @@ class HeaderElement extends HTMLElement {
 
     }
     connectedCallback() {
-        let wrapper = document.createElement('wrapper'),
+        let wrapper = document.createElement('div'),
             text = document.createElement('p'),
             _text = this.getAttribute('text'),
             css = document.createElement('style');
@@ -67,7 +67,7 @@ class HeaderElement extends HTMLElement {
         text.setAttribute('class', 'header__element-text');
         wrapper.setAttribute('class', 'header__element');
         css.textContent = '.header__element {display: flex;flex-direction: column;align-items: flex-start;margin-top: .5em}' +
-            '.header__element-text {transform: matrix(1, 0, 0, 1, 0, 0);opacity: .3;transition: all .2s ease-in-out;cursor: pointer}' +
+            '.header__element-text {transform: matrix(1, 0, 0, 1, 0, 0);opacity: .3;transition: all .2s ease-in-out;cursor: pointer;}' +
             '.header__element-text:hover {transform: matrix(1.2, 0, 0, 1, 7, 0); opacity: 1;transition: all .2 s ease - in -out}' +
             '@media screen and (max-width: 800px) {' +
             '.header__element {text-align: center;align-items: center}' +
@@ -91,21 +91,33 @@ class HrText extends HTMLElement {
         })
     }
     connectedCallback() {
-        let wrapper = document.createElement('wrapper'),
+        let wrapper = document.createElement('div'),
             text = document.createElement('p'),
             _text = this.getAttribute('text'),
             leftHr = document.createElement('hr'),
             rightHr = document.createElement('hr'),
+            bottomHr = document.createElement('hr'),
             css = document.createElement('style');
-        wrapper.setAttribute('class', 'hr-text');
-        css.textContent = '.hr-text {width: 100%; height: 10px; background: blue}';
+        wrapper.setAttribute('class', 'hr-wrapper');
+        leftHr.setAttribute('class', 'hr-line');
+        rightHr.setAttribute('class', 'hr-line');
+        bottomHr.setAttribute('class', 'hr-bottom')
+        css.textContent = '.hr-wrapper { width: 80vw; height: 50px; margin: 0 auto; display: flex; flex-direction: row; justify-content: center; align-items: center}' +
+            '.hr-bottom{display: none;  width: 80vw; border: 0; height: 1px; background: white}' +
+            '.hr-line {display: block; border: 0; height: 1px; background: white; width: 33%}' +
+            '@media screen and (max-width: 800px) {' +
+            '.hr-wrapper{flex-direction: column}' +
+            '.hr-line {display: none}' +
+            '.hr-bottom {display: block}' +
+            '}';
         text.textContent = _text;
         this.shadow.appendChild(css);
         this.shadow.appendChild(wrapper);
         wrapper.appendChild(leftHr);
         wrapper.appendChild(text);
         wrapper.appendChild(rightHr);
+        wrapper.appendChild(bottomHr);
     }
 }
 
-window.customeElement.define('hr-text', HrText);
+window.customElements.define('hr-text', HrText);

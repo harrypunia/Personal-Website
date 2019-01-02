@@ -31,16 +31,16 @@
     font-family: 'cinzel', serif;
 }
 
-@media screen and (max-width: 1200px) {}
+@media screen and (max-width: 1200px) {
+    .text__medium {
+        font-size: 1.6em
+    }
+}
 
 @media screen and (max-width: 1000px) {}
 
 @media screen and (max-width: 800px) {
     .text__small {
-        font-size: 2em;
-    }
-
-    .text__medium {
         font-size: 2em;
     }
 
