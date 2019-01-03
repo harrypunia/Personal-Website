@@ -3,11 +3,14 @@ html {
     margin: 0px;
     padding: 0px;
     font-size: 62.5%;
-    color: #efefef;
     width: 100vw;
     min-width: 375px;
     overflow-x: hidden;
     scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 a {
@@ -57,19 +60,19 @@ div[lazy] {
 }
 
 div[to="up"] {
-    transform: translate3d(0, 100px, 0);
+    transform: translate3d(0, 66.67px, 0);
 }
 
 div[to="right"] {
-    transform: translate3d(100px, 0, 0);
+    transform: translate3d(-66.67px, 0, 0);
 }
 
 div[to="left"] {
-    transform: translate3d(-100px, 0, 0);
+    transform: translate3d(66.67px, 0, 0);
 }
 
 div[to="bottom"] {
-    transform: translate3d(0, -100px, 0);
+    transform: translate3d(0, -66.67px, 0);
 }
 
 div[load-lazy] {

@@ -1,5 +1,6 @@
 .define-text {
     line-height: 1.5em;
+    color: white;
 }
 
 .text__small {
@@ -35,9 +36,17 @@
     font-family: 'cinzel', serif;
 }
 
-@media screen and (max-width: 1200px) {}
+@media screen and (max-width: 1200px) {
+    .text__large {
+        font-size: 4em;
+    }
+}
 
-@media screen and (max-width: 1000px) {}
+@media screen and (max-width: 1000px) {
+    .text__large {
+        font-size: 3.5em;
+    }
+}
 
 @media screen and (max-width: 800px) {
     .text__small {
@@ -55,4 +64,9 @@
     .text__xlarge {
         font-size: 8em;
     }
+}
+
+/*Colors*/
+.text--fade {
+    color: #898989 !important;
 }

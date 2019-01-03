@@ -38,25 +38,27 @@
             </div>
         </header>
         <fade-scroll class="hero">
-            <div class="wrapper">
-                <div class="hero__text">
-                    <distort-text onload dir="in" text="Hey_there" class="define-text text__medium text__mada"></distort-text>
-                    <distort-text onload dir="in" text="Harry_Punia" class="define-text text__xlarge text__cinzel"></distort-text>
-                    <distort-text onload dir="in" text="Designer_•_Developer" class="define-text text__medium text__mada"></distort-text>
-                </div>
+            <div class="hero__text">
+                <distort-text onload dir="in" text="Hey_there" class="define-text text__medium text__mada"></distort-text>
+                <distort-text onload dir="in" text="Harry_Punia" class="define-text text__xlarge text__cinzel"></distort-text>
+                <distort-text onload dir="in" text="Designer_•_Developer" class="define-text text__medium text__mada"></distort-text>
             </div>
         </fade-scroll>
         <fade-scroll style="position: relative; float: left">
             <hr-text text="About me" class="define-text text__mada text__medium"></hr-text>
         </fade-scroll>
         <fade-scroll id="intro" class="intro">
-            <lazy-component class="wrapper">
+            <lazy-component class="wrapper--flex">
                 <div lazy class="intro__card">
-                    <div lazy to="right" class="intro__image">
-                        <img src="assets/img/harryPunia.png" alt="Harry Punia">
+                    <div lazy to="up" class="intro__image">
+                        <img src="assets/img/harry-1.jpg" alt="Harry Punia">
                     </div>
-                    <div lazy to="up">Hey</div>
-                    <div lazy to="left">Hey</div>
+                    <div lazy to="up" class="intro__info">
+                        <p class="define-text text__large text__mada-bold">Harry Punia / <span class="text--fade">Harsimran Punia</span></p>
+                        <div class="intro__bio">
+                            <p class="define-text text__regular text__mada"></p>
+                        </div>
+                    </div>
                 </div>
             </lazy-component>
         </fade-scroll>
