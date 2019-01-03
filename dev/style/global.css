@@ -35,6 +35,8 @@ a {
 fade-scroll {
     display: block;
     position: relative;
+    width: 100vw;
+    min-width: 375px;
 }
 
 distort-text {
