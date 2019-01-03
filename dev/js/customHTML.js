@@ -108,7 +108,7 @@ class HrText extends HTMLElement {
         rightAr.setAttribute('src', 'assets/img/hr-arrow.svg');
         leftAr.setAttribute('src', 'assets/img/hr-arrow.svg');
         bottomHr.setAttribute('class', 'hr-bottom');
-        css.textContent = '.hr-wrapper { width: 80vw; height: 50px; margin: 0 auto; display: flex; flex-direction: row; justify-content: center; align-items: center}' +
+        css.textContent = '.hr-wrapper {width: 100vw; height: 50px; padding: 0 10vw; box-sizing: border-box; display: flex; flex-direction: row; justify-content: center; align-items: center}' +
             '.hr-bottom{display: none;  width: 80vw; border-top: 1px solid white; border-top: 1px solid white; border-left: 0; border-right: 0; height: 3px; margin: 0 auto}' +
             '.hr-line {display: block; border: 0; height: 1px; background: white; width: 33%; margin: 0 auto}' +
             '.left-arrow {transform: rotate(180deg);}' +

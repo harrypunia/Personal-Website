@@ -4,7 +4,7 @@ body {
     font-size: 62.5%;
     color: #efefef;
     width: 100vw;
-    height: auto;
+    height: 500px;
     overflow-x: hidden;
 }
 
@@ -40,6 +40,23 @@ distort-text {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+lazy-component {
+    display: block;
+}
+
+lazy {
+    display: block;
+    opacity: 0;
+    transform: translate3d(0, 100px, 0);
+    transition: opacity .4s ease-out, transform .4s ease-out;
+}
+
+lazy[load] {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    transition: transform .2s ease-out, opacity .2s ease-out;
 }
 
 hr {
