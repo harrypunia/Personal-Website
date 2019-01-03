@@ -28,15 +28,18 @@
 
 <body>
     <div id="canvas"></div>
+    <div class="burger" onclick="openHeader(); toggleDistortedText()">
+        <div class="bar1 bars"></div>
+        <div class="bar2 bars"></div>
+    </div>
+    <header class="header">
+        <div class="wrapper text__medium define-text text__cinzel">
+            <header-element text="About me"></header-element>
+            <header-element text="Case Studies"></header-element>
+            <header-element text="Contact"></header-element>
+        </div>
+    </header>
     <div class="container">
-        <div class="burger" onclick="openHeader(); toggleDistortedText()"></div>
-        <header class="header">
-            <div class="wrapper text__medium define-text text__cinzel">
-                <header-element text="About me"></header-element>
-                <header-element text="Case Studies"></header-element>
-                <header-element text="Contact"></header-element>
-            </div>
-        </header>
         <fade-scroll class="hero">
             <div class="hero__text">
                 <distort-text onload dir="in" text="Hey_there" class="define-text text__medium text__mada"></distort-text>

@@ -7,21 +7,63 @@
     z-index: 999;
 }
 
+/*
 .burger {
     position: fixed;
     display: none;
     left: 10%;
     cursor: pointer;
-    width: 50px;
+    width: 60px;
     height: 80px;
     background: white;
     z-index: 999999;
+}
+*/
+
+.bars {
+    width: 20px;
+    margin-left: 5px;
+    height: 1px;
+    background: white;
+}
+
+.bar2 {
+    margin-top: 5px;
 }
 
 .convertBurger {
     transition: background .1s;
     transition-delay: .3s;
     background: red;
+}
+
+@media screen and (max-width: 1400px) {
+    .burger {
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        left: -10px;
+        top: 0;
+        width: 50px;
+        background: rgba(0, 0, 0, 0.1);
+        height: 100vh;
+        border-right: 1px solid #666;
+        transition: background .2s ease-in, left .2s ease-in;
+        cursor: pointer;
+        z-index: 9999999;
+    }
+
+    .burger:hover {
+        background: rgba(0, 0, 0, .4);
+        left: 0;
+        transition: background .2s ease-out, left .2s ease-out;
+    }
+
+    .header {
+        transform: translate3d(-100%, 0, 0);
+    }
 }
 
 @media screen and (max-width: 800px) {
