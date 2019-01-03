@@ -32,9 +32,11 @@ window.onresize = () => {
 }
 
 window.addEventListener("scroll", () => {
+    let y = window.pageYOffset;
+    //Lazy component
     let lazyParents = document.getElementsByTagName('lazy-component');
     for (let i = 0; i < lazyParents.length; i++) {
-        let posY = (lazyParents[i].offsetTop - window.pageYOffset) < -(window.innerHeight / 3);
+        let posY = (lazyParents[i].offsetTop - y) < -(window.innerHeight / 3);
         if (!lazyParents[i].hasAttribute('loaded') && posY) {
             lazyParents[i].setAttribute('loaded', '');
             let lazyChildren = lazyParents[i].querySelectorAll('div[lazy]');
@@ -44,4 +46,20 @@ window.addEventListener("scroll", () => {
             }
         }
     }
+    //Header component
+    let header = document.getElementsByClassName('header')[0],
+        headerOgHeight = 200,
+        cap = 200,
+        headerHeight = header.offsetHeight;
+    if (y < cap) {
+        header.style.height = headerOgHeight - (y / 10) + 'px';
+        header.style.background = 'rgba(0, 0, 0, ' + y / cap + ')';
+    } else {
+        header.style.height = headerOgHeight - (cap / 10) + 'px';
+        header.style.background = 'rgba(0, 0, 0, 100)'
+    }
 });
+
+window.onload = () => {
+    window.scrollY = 0;
+}
