@@ -1,5 +1,6 @@
 .define-text {
     line-height: 1.5em;
+    text-align: left;
     color: white;
 }
 
@@ -8,7 +9,7 @@
 }
 
 .text__regular {
-    font-size: 1.6em;
+    font-size: 2.2em;
 }
 
 .text__medium {
@@ -36,21 +37,17 @@
     font-family: 'cinzel', serif;
 }
 
-@media screen and (max-width: 1200px) {
-    .text__large {
-        font-size: 4em;
-    }
-}
+@media screen and (max-width: 1200px) {}
 
-@media screen and (max-width: 1000px) {
-    .text__large {
-        font-size: 3.5em;
-    }
-}
+@media screen and (max-width: 1000px) {}
 
 @media screen and (max-width: 800px) {
     .text__small {
-        font-size: 2em;
+        font-size: 1.7em;
+    }
+
+    .text__regular {
+        font-size: 1.7em;
     }
 
     .text__medium {
@@ -58,7 +55,7 @@
     }
 
     .text__large {
-        font-size: 3em;
+        font-size: 3.5em;
     }
 
     .text__xlarge {
@@ -70,3 +67,9 @@
 .text--fade {
     color: #898989 !important;
 }
+
+.text--fade-light {
+    color: #bababa !important;
+}
+
+/*Modifications*/

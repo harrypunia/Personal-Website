@@ -34,6 +34,13 @@
     position: relative;
     float: left;
     width: 60%;
+    height: 300px;
+    margin-left: 30px;
+}
+
+.intro__name {
+    margin-top: 10px;
+    text-align: left;
     margin-left: 30px;
 }
 
@@ -45,7 +52,9 @@
     background: #222;
     border: 1px solid #333;
     border-radius: 5px;
-    box-shadow: 0 0 10px 0 solid red;
+    box-shadow: inset 0 0 20px 0 #151515;
+    padding: 20px 30px;
+    margin-top: 20px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -65,13 +74,17 @@
     }
 
     .intro__info {
-        text-align: center;
         width: 100%;
         margin: 20px 0 0 0;
     }
 
     .intro__bio {
         height: 150px;
+    }
+
+    .intro__name {
+        text-align: center;
+        margin-left: 0;
     }
 
 }
