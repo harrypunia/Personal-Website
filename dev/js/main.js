@@ -8,7 +8,17 @@ const openHeader = (reset) => {
         headerIsOpen = false;
         burger.classList.remove('convertBurger')
     } else {
-        headerIsOpen ? (header.classList.remove('openHeader'), headerIsOpen = false, burger.classList.remove('convertBurger')) : (header.classList.add('openHeader'), headerIsOpen = true, burger.classList.add('convertBurger'));
+        if (headerIsOpen) {
+            header.classList.remove('openHeader');
+            burger.classList.remove('convertBurger');
+            filter.classList.remove('show-filter');
+            headerIsOpen = false;
+        } else {
+            header.classList.add('openHeader');
+            burger.classList.add('convertBurger');
+            filter.classList.add('show-filter');
+            headerIsOpen = true;
+        }
     }
 }
 

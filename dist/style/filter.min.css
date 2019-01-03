@@ -1,0 +1,1 @@
+filter{display:none;width:100vw;height:100vh;position:fixed;z-index:999;background:rgba(0,0,0);opacity:0;transition:background .2s ease-out;user-select:none;backface-visibility:hidden}.showFilter{display:block}

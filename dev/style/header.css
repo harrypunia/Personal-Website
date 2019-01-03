@@ -1,7 +1,7 @@
 .header {
     position: fixed;
     width: 200px;
-    height: 250px;
+    height: 200px;
     user-select: none;
     backface-visibility: hidden;
     z-index: 999;
@@ -31,12 +31,6 @@
     margin-top: 5px;
 }
 
-.convertBurger {
-    transition: background .1s;
-    transition-delay: .3s;
-    background: red;
-}
-
 @media screen and (max-width: 1400px) {
     .burger {
         position: fixed;
@@ -47,7 +41,7 @@
         left: -10px;
         top: 0;
         width: 50px;
-        background: rgba(0, 0, 0, 0.1);
+        background: rgba(0, 0, 0, 0.4);
         height: 100vh;
         border-right: 1px solid #666;
         transition: background .2s ease-in, left .2s ease-in;
@@ -56,13 +50,23 @@
     }
 
     .burger:hover {
-        background: rgba(0, 0, 0, .4);
+        background: rgba(0, 0, 0, .5);
         left: 0;
         transition: background .2s ease-out, left .2s ease-out;
     }
 
     .header {
         transform: translate3d(-100%, 0, 0);
+    }
+
+    .convertBurger {
+        left: 250px;
+        background: rgba(0, 0, 0, 0.6);
+    }
+
+    .convertBurger:hover {
+        background: rgba(0, 0, 0, 0.6);
+        left: 250px;
     }
 }
 

@@ -7,7 +7,8 @@ let headerIsOpen = false,
     scrollModerator = 20,
     scrollLimit = 10,
     once = true,
-    force = 20;
+    force = 20,
+    filter = document.getElementsByTagName('filter')[0];
 
 console.log('%cGitHub: https://github.com/harrypunia                       ', 'background: #efefef; width: 100%; color: #333; padding:5px 10px;');
 console.log('%cInstagram: https://www.instagram.com/puniaharsimran         ', 'background: #efefef; width: 100%; color: #333; padding:5px 10px;');
