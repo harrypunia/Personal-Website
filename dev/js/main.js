@@ -37,10 +37,10 @@ window.addEventListener("scroll", () => {
         let posY = (lazyParents[i].offsetTop - window.pageYOffset) < -(window.innerHeight / 3);
         if (!lazyParents[i].hasAttribute('loaded') && posY) {
             lazyParents[i].setAttribute('loaded', '');
-            let lazyChildren = lazyParents[i].getElementsByTagName('lazy');
+            let lazyChildren = lazyParents[i].querySelectorAll('div[lazy]');
             for (let j = 0; j < lazyChildren.length; j++) {
-                lazyChildren[j].setAttribute('load', '');
-                lazyChildren[j].style.transitionDelay = j / 5 + 's';
+                lazyChildren[j].setAttribute('load-lazy', '');
+                lazyChildren[j].style.transitionDelay = j / 8 + 's';
             }
         }
     }

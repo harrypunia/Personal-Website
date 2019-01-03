@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="dist/style/fonts.min.css">
     <link rel="stylesheet" href="dist/style/header.min.css">
     <link rel="stylesheet" href="dist/style/hero.min.css">
-    <link rel="stylesheet" href="dist/style/body.min.css">
+    <link rel="stylesheet" href="dist/style/intro.min.css">
     <link rel="stylesheet" href="dist/style/footer.min.css">
     <script src="lib/p5.min.js"></script>
     <script src="dev/js/customHTML.js"></script>
@@ -46,14 +46,14 @@
                 </div>
             </div>
         </fade-scroll>
-        <fade-scroll style="position: relative; float: left;">
+        <fade-scroll style="position: relative; float: left">
             <hr-text text="About me" class="define-text text__mada text__medium"></hr-text>
         </fade-scroll>
-        <fade-scroll id="body" class="body">
+        <fade-scroll id="intro" class="intro">
             <lazy-component class="wrapper">
-                <lazy>Harry</lazy>
-                <lazy>Hey</lazy>
-                <lazy>Hey</lazy>
+                <div lazy to="right">Harry</div>
+                <div lazy to="up">Hey</div>
+                <div lazy to="left">Hey</div>
             </lazy-component>
         </fade-scroll>
         <fade-scroll id="footer" class="footer">

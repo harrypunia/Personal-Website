@@ -1,14 +1,15 @@
 .hero {
     will-change: opacity;
     width: 100%;
+    min-width: 375px;
     height: 100vh;
     min-height: 800px;
 }
 
 .hero__text {
     position: absolute;
-    left: 50vw;
-    top: 50vh;
+    left: 50%;
+    top: 50%;
     transform: translate(-50%, -50%);
     display: flex;
     justify-content: center;

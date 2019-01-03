@@ -1,10 +1,11 @@
-body {
+body,
+html {
     margin: 0px;
     padding: 0px;
     font-size: 62.5%;
     color: #efefef;
     width: 100vw;
-    height: 500px;
+    min-width: 375px;
     overflow-x: hidden;
 }
 
@@ -46,17 +47,31 @@ lazy-component {
     display: block;
 }
 
-lazy {
+div[lazy] {
     display: block;
     opacity: 0;
-    transform: translate3d(0, 100px, 0);
-    transition: opacity .4s ease-out, transform .4s ease-out;
 }
 
-lazy[load] {
+div[to="up"] {
+    transform: translate3d(0, 100px, 0);
+}
+
+div[to="right"] {
+    transform: translate3d(100px, 0, 0);
+}
+
+div[to="left"] {
+    transform: translate3d(-100px, 0, 0);
+}
+
+div[to="bottom"] {
+    transform: translate3d(0, -100px, 0);
+}
+
+div[load-lazy] {
     opacity: 1;
     transform: translate3d(0, 0, 0);
-    transition: transform .2s ease-out, opacity .2s ease-out;
+    transition: transform .4s ease-out, opacity .4s ease-out;
 }
 
 hr {

@@ -1,12 +1,24 @@
-var canvas = sketch = document.getElementById('canvas');
+var sketch = document.getElementById('canvas');
+
+const applyScrollForce = e => {
+    let forceDir = (prevScrollPos - window.pageYOffset) / scrollModerator;
+    forceDir > scrollLimit ? forceDir = scrollLimit : forceDir < -scrollLimit ? forceDir = -scrollLimit : 0;
+    let force = createVector(0, forceDir);
+    for (let i = 0; i < particles.length; i++) {
+        particles[i].applyForce(force)
+    }
+    prevScrollPos = window.pageYOffset;
+}
 
 function setup() {
-    canvas = createCanvas(window.innerWidth, window.innerHeight, P2D);
+    let w = sketch.offsetWidth < 375 ? 375 : sketch.offsetWidth;
+    canvas = createCanvas(w, window.innerHeight, P2D);
     canvas.parent(sketch);
     for (let i = 0; i < 50; i++) {
         particles[i] = new Particle(Math.random() * window.innerWidth, Math.random() * window.innerHeight);
     }
     background(0);
+    window.addEventListener("scroll", applyScrollForce, false)
 }
 
 function draw() {
@@ -31,15 +43,6 @@ function draw() {
 
 function windowResized() {
     resizing = false;
-    resizeCanvas(window.innerWidth, window.innerHeight);
+    let w = sketch.offsetWidth < 375 ? 375 : sketch.offsetWidth;
+    resizeCanvas(w, window.innerHeight);
 }
-
-window.addEventListener("scroll", () => {
-    let forceDir = (prevScrollPos - window.pageYOffset) / scrollModerator;
-    forceDir > scrollLimit ? forceDir = scrollLimit : forceDir < -scrollLimit ? forceDir = -scrollLimit : 0;
-    let force = createVector(0, forceDir);
-    for (let i = 0; i < particles.length; i++) {
-        particles[i].applyForce(force)
-    }
-    prevScrollPos = window.pageYOffset;
-})
