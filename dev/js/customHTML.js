@@ -68,8 +68,8 @@ class HeaderElement extends HTMLElement {
         wrapper.setAttribute('class', 'header__element');
         css.textContent = '.header__element {display: flex;flex-direction: column; align-items: flex-start}' +
             '.header__element p {margin: 0}' +
-            '.header__element-text {transform: matrix(1, 0, 0, 1, 0, 0);opacity: .3; transition: transform .2s ease-in-out; cursor: pointer; padding: 10px 0; cursor: pointer}' +
-            '.header__element-text:hover {transform: matrix(1.2, 0, 0, 1, 7, 0); opacity: 1; transition: transform .2s ease-in-out}' +
+            '.header__element-text {transform: matrix(1, 0, 0, 1, 0, 0);opacity: .3; transition: transform .2s ease-in, opacity .2s ease-in; cursor: pointer; padding: 10px 0; cursor: pointer}' +
+            '.header__element-text:hover {transform: matrix(1.2, 0, 0, 1, 7, 0); opacity: 1; transition: transform .2s ease-out, opacity .2s ease-out}' +
             '@media screen and (max-width: 800px) {' +
             '.header__element {text-align: center; align-items: center}' +
             '.header__element-text {opacity: 1; font-size: 2em; padding: 20px 0}' +

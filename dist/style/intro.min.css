@@ -1,1 +1,1 @@
-.intro{position:relative;float:left;width:100vw;height:auto;background:#000}.intro__card{width:80%;height:300px;margin:0 auto;background:grey}
+.intro{position:relative;float:left;width:100vw;height:auto;background:#000}.intro__card{width:80%;height:300px;margin:0 auto;background:grey}@media screen and (max-width:800px){.intro__card{width:1000px}}

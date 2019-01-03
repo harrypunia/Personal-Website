@@ -12,3 +12,9 @@
     margin: 0 auto;
     background: grey;
 }
+
+@media screen and (max-width: 800px) {
+    .intro__card {
+        width: 1000px;
+    }
+}

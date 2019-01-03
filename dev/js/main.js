@@ -25,25 +25,6 @@ const toggleDistortedText = () => {
     }
 }
 
-const reactiveHeader = y => {
-    let header = document.getElementsByClassName('header')[0];
-    if (window.innerWidth > 800) {
-        let headerOgHeight = 200,
-            cap = 200,
-            headerHeight = header.offsetHeight;
-        if (y < cap) {
-            header.style.height = headerOgHeight - (y / 10) + 'px';
-            header.style.background = 'rgba(0, 0, 0, ' + y / cap + ')';
-        } else {
-            header.style.height = headerOgHeight - (cap / 10) + 'px';
-            header.style.background = 'rgba(0, 0, 0, 100)'
-        }
-    } else {
-        header.style.background = '#151515';
-        header.style.height = '90%';
-    }
-}
-
 const lazyElements = y => {
     //Lazy component
     let lazyParents = document.getElementsByTagName('lazy-component');
@@ -63,7 +44,6 @@ const lazyElements = y => {
 window.onscroll = () => {
     let y = window.pageYOffset;
     lazyElements(y);
-    reactiveHeader(y);
 };
 
 window.onresize = () => {
@@ -72,11 +52,9 @@ window.onresize = () => {
     }
     let y = window.pageYOffset;
     lazyElements(y);
-    reactiveHeader(y);
 }
 
 window.onload = () => {
     let y = window.pageYOffset;
     lazyElements(y);
-    reactiveHeader(y);
 }
