@@ -25,14 +25,26 @@ const toggleDistortedText = () => {
     }
 }
 
-window.onresize = () => {
-    if (headerIsOpen) {
-        (window.innerWidth >= 800) ? openHeader('reset'): 0;
+const reactiveHeader = y => {
+    let header = document.getElementsByClassName('header')[0];
+    if (window.innerWidth > 800) {
+        let headerOgHeight = 200,
+            cap = 200,
+            headerHeight = header.offsetHeight;
+        if (y < cap) {
+            header.style.height = headerOgHeight - (y / 10) + 'px';
+            header.style.background = 'rgba(0, 0, 0, ' + y / cap + ')';
+        } else {
+            header.style.height = headerOgHeight - (cap / 10) + 'px';
+            header.style.background = 'rgba(0, 0, 0, 100)'
+        }
+    } else {
+        header.style.background = '#151515';
+        header.style.height = '90%';
     }
 }
 
-window.addEventListener("scroll", () => {
-    let y = window.pageYOffset;
+const lazyElements = y => {
     //Lazy component
     let lazyParents = document.getElementsByTagName('lazy-component');
     for (let i = 0; i < lazyParents.length; i++) {
@@ -46,20 +58,25 @@ window.addEventListener("scroll", () => {
             }
         }
     }
-    //Header component
-    let header = document.getElementsByClassName('header')[0],
-        headerOgHeight = 200,
-        cap = 200,
-        headerHeight = header.offsetHeight;
-    if (y < cap) {
-        header.style.height = headerOgHeight - (y / 10) + 'px';
-        header.style.background = 'rgba(0, 0, 0, ' + y / cap + ')';
-    } else {
-        header.style.height = headerOgHeight - (cap / 10) + 'px';
-        header.style.background = 'rgba(0, 0, 0, 100)'
+}
+
+window.onscroll = () => {
+    let y = window.pageYOffset;
+    lazyElements(y);
+    reactiveHeader(y);
+};
+
+window.onresize = () => {
+    if (headerIsOpen) {
+        (window.innerWidth >= 800) ? openHeader('reset'): 0;
     }
-});
+    let y = window.pageYOffset;
+    lazyElements(y);
+    reactiveHeader(y);
+}
 
 window.onload = () => {
-    window.scrollY = 0;
+    let y = window.pageYOffset;
+    lazyElements(y);
+    reactiveHeader(y);
 }
