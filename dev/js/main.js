@@ -6,7 +6,8 @@ const openHeader = (reset) => {
         toggleDistortedText();
         header.classList.remove('openHeader');
         headerIsOpen = false;
-        burger.classList.remove('convertBurger')
+        burger.classList.remove('convertBurger');
+        filter.classList.remove('show-filter');
     } else {
         if (headerIsOpen) {
             header.classList.remove('openHeader');

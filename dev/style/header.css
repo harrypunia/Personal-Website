@@ -1,30 +1,36 @@
 .header {
     position: fixed;
     width: 200px;
-    height: 200px;
+    height: 100vh;
     user-select: none;
     backface-visibility: hidden;
-    z-index: 999;
+    z-index: 999999;
 }
 
-/*
 .burger {
     position: fixed;
     display: none;
-    left: 10%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    left: -10px;
+    top: 0;
+    width: 50px;
+    background: rgba(0, 0, 0, 0.4);
+    height: 100vh;
+    border-right: 1px solid #666;
+    transition: background .2s ease-out, left .2s ease-out;
     cursor: pointer;
-    width: 60px;
-    height: 80px;
-    background: white;
-    z-index: 999999;
+    z-index: 9999999;
 }
-*/
 
 .bars {
     width: 20px;
     margin-left: 5px;
     height: 1px;
     background: white;
+    transition: transform .2s ease-out;
+    transition-delay: .2s;
 }
 
 .bar2 {
@@ -33,40 +39,46 @@
 
 @media screen and (max-width: 1400px) {
     .burger {
-        position: fixed;
         display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        left: -10px;
-        top: 0;
-        width: 50px;
-        background: rgba(0, 0, 0, 0.4);
-        height: 100vh;
-        border-right: 1px solid #666;
-        transition: background .2s ease-in, left .2s ease-in;
-        cursor: pointer;
-        z-index: 9999999;
     }
 
     .burger:hover {
         background: rgba(0, 0, 0, .5);
         left: 0;
-        transition: background .2s ease-out, left .2s ease-out;
+        transition: background .2s ease-in, left .2s ease-in;
     }
 
     .header {
         transform: translate3d(-100%, 0, 0);
+        transition: transform .2s ease-out;
+        background: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .convertBurger {
-        left: 250px;
+        left: 200px;
         background: rgba(0, 0, 0, 0.6);
+        border-left: 1px solid #666;
     }
 
     .convertBurger:hover {
-        background: rgba(0, 0, 0, 0.6);
-        left: 250px;
+        background: rgba(0, 0, 0, 1);
+        left: 200px;
+    }
+
+    .convertBurger .bar1 {
+        transform: rotate(45deg)
+    }
+
+    .convertBurger .bar2 {
+        transform: rotate(-45deg)
+    }
+
+    .openHeader {
+        transform: translate3d(0, 0, 0);
+        transition: transform .2s ease-in;
     }
 }
 

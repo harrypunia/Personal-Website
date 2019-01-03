@@ -6,11 +6,13 @@ filter {
     z-index: 999;
     background: rgba(0, 0, 0);
     opacity: 0;
-    transition: background .2s ease-out;
+    transition: opacity 1s ease-out;
     user-select: none;
     backface-visibility: hidden;
 }
 
-.showFilter {
+.show-filter {
     display: block;
+    opacity: .9;
+    transition: opacity 1s ease-out;
 }
