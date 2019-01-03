@@ -47,6 +47,7 @@ distort-text {
 
 lazy-component {
     display: block;
+    width: 80vw;
 }
 
 div[lazy] {

@@ -1,1 +1,1 @@
-.intro{position:relative;float:left;display:flex;width:100vw;height:auto;justify-content:center;align-items:center;background:#000}
+.intro{position:relative;float:left;width:100vw;height:auto;background:#000}.intro__card{width:80%;height:300px;margin:0 auto;background:grey}
