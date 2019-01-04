@@ -37,9 +37,9 @@
     </div>
     <header class="header">
         <div class="wrapper text__medium define-text text__cinzel">
-            <header-element text="About me"></header-element>
-            <header-element text="Case Studies"></header-element>
-            <header-element text="Contact"></header-element>
+            <header-element onclick="openHeader(); toggleDistortedText()" text="About me"></header-element>
+            <header-element onclick="openHeader(); toggleDistortedText()" text="Case Studies"></header-element>
+            <header-element onclick="openHeader(); toggleDistortedText()" text="Contact"></header-element>
         </div>
     </header>
     <div class="container">
@@ -69,7 +69,7 @@
                 </div>
             </lazy-component>
         </fade-scroll>
-        <fade-scroll id="footer" class="footer">
+        <fade-scroll class="footer">
             <div class="wrapper">
                 <div id="contact"></div>
             </div>

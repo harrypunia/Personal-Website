@@ -16,3 +16,10 @@ filter {
     opacity: .9;
     transition: opacity 1s ease-out;
 }
+
+@media screen and (max-width: 800px) {
+    .show-filter {
+        display: none;
+        opacity: 0;
+    }
+}

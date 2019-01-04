@@ -56,7 +56,6 @@ class HeaderElement extends HTMLElement {
         this.shadow = this.attachShadow({
             mode: 'open'
         });
-
     }
     connectedCallback() {
         let wrapper = document.createElement('div'),

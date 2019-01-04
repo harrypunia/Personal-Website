@@ -59,7 +59,7 @@ window.onscroll = () => {
 
 window.onresize = () => {
     if (headerIsOpen) {
-        (window.innerWidth >= 800) ? openHeader('reset'): 0;
+        (window.innerWidth >= 1400) ? openHeader('reset'): 0;
     }
     let y = window.pageYOffset;
     lazyElements(y);

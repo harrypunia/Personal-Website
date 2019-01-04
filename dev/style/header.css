@@ -30,7 +30,6 @@
     height: 1px;
     background: white;
     transition: transform .2s ease-out;
-    transition-delay: .2s;
 }
 
 .bar2 {
@@ -40,12 +39,13 @@
 @media screen and (max-width: 1400px) {
     .burger {
         display: flex;
+        transition: background .2s ease-in, left .2s ease-out;
     }
 
     .burger:hover {
         background: rgba(0, 0, 0, .5);
         left: 0;
-        transition: background .2s ease-in, left .2s ease-in;
+        transition: background .2s ease-in, left .2s ease-out;
     }
 
     .header {
@@ -61,19 +61,45 @@
         left: 200px;
         background: rgba(0, 0, 0, 0.6);
         border-left: 1px solid #666;
+        transition: border .2s, left .2s ease-in;
+    }
+
+    .burger:hover .bar1 {
+        transform: translateY(7px);
+    }
+
+    .burger:hover .bar2 {
+        transform: translateY(-7px);
     }
 
     .convertBurger:hover {
-        background: rgba(0, 0, 0, 1);
+        border-right: 1px solid #bababa;
+        border-left: 1px solid #bababa;
         left: 200px;
+        transition: border .2s, left .2s ease-in;
+    }
+
+    .convertBurger:hover .bar1 {
+        background: red;
+        transform: rotate(45deg) translateY(4px) scale3d(1.2, 1.2, 1)
+    }
+
+    .convertBurger:hover .bar2 {
+        background: red;
+        transform: rotate(-45deg) translateY(-4px) scale3d(1.2, 1.2, 1)
+    }
+
+    .convertBurger .bars {
+        transition: transform .2s ease-in;
+        background: red;
     }
 
     .convertBurger .bar1 {
-        transform: rotate(45deg)
+        transform: rotate(45deg) translateY(4px)
     }
 
     .convertBurger .bar2 {
-        transform: rotate(-45deg)
+        transform: rotate(-45deg) translateY(-4px)
     }
 
     .openHeader {
@@ -84,7 +110,85 @@
 
 @media screen and (max-width: 800px) {
     .burger {
-        display: block;
+        display: flex;
+        width: 80%;
+        height: 50px;
+        top: -10px;
+        left: 10%;
+        transition: background .2s ease-in, top .2s ease-out;
+        border-bottom: 1px solid #666;
+        border-right: 0;
+    }
+
+    .burger:hover {
+        background: rgba(0, 0, 0, .5);
+        top: 0;
+        left: 10%;
+        transition: background .2s ease-in, top .2s ease-out;
+        border-right: 0;
+    }
+
+    .burger:hover .bar1 {
+        transform: translateY(7px);
+    }
+
+    .burger:hover .bar2 {
+        transform: translateY(-7px);
+    }
+
+    .convertBurger {
+        top: 0;
+        left: 10%;
+        background: rgba(0, 0, 0, 0.6);
+        border-bottom: 1px solid #666;
+        border-right: 0;
+        border-left: 0;
+        transition: border .2s, top .2s ease-in;
+    }
+
+    .convertBurger:hover {
+        top: 0;
+        left: 10%;
+        border-bottom: 1px solid #bababa;
+        border-right: 0;
+        border-left: 0;
+        left transition: border .2s, top .2s ease-in;
+    }
+
+    .burger:hover .bar1 {
+        transform: translateY(7px);
+    }
+
+    .burger:hover .bar2 {
+        transform: translateY(-7px);
+    }
+
+    .convertBurger:hover .bar1 {
+        background: red;
+        transform: rotate(45deg) translateY(4px) scale3d(1.2, 1.2, 1)
+    }
+
+    .convertBurger:hover .bar2 {
+        background: red;
+        transform: rotate(-45deg) translateY(-4px) scale3d(1.2, 1.2, 1)
+    }
+
+    .convertBurger .bars {
+        transition: transform .2s ease-in;
+        background: red;
+    }
+
+    .convertBurger .bar1 {
+        transform: rotate(45deg) translateY(4px)
+    }
+
+    .convertBurger .bar2 {
+        transform: rotate(-45deg) translateY(-4px)
+    }
+
+    .openHeader {
+        transform: translate3d(0, 0, 0);
+        transition: transform .2s ease-in;
     }
 
     .header {
@@ -95,6 +199,7 @@
         width: 80%;
         height: 90%;
         transition: transform .4s ease-in;
+        transform: translate3d(0, -100%, 0);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -103,6 +208,5 @@
     .openHeader {
         transform: translate3d(0, 100%, 0);
         transition: transform .4s ease-out;
-        transition-delay: .3s;
     }
 }
