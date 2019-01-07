@@ -1,50 +1,33 @@
-.intro {
-    position: relative;
-    display: block;
-    float: left;
-    width: 100vw;
-    height: auto;
-}
-
 .intro__image {
-    position: relative;
-    float: left;
-    display: block;
     width: 400px;
     height: 500px;
+    margin: 0;
+    z-index: 999999;
+    background: #a73030;
 }
 
 .intro__image img {
-    width: 100%;
-    height: auto;
-    display: block;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: margin-top .2s;
+    height: 100%;
+    transition: margin-top .1s;
 }
 
 .intro__info {
-    position: relative;
-    float: left;
+    height: auto;
     width: 60%;
-    height: 300px;
-    margin-left: 30px;
+    margin: auto;
 }
 
 .intro__name {
-    margin-top: 10px;
-    text-align: left;
-    margin-left: 30px;
+    text-align: center;
 }
 
 .intro__bio {
     position: relative;
     float: left;
     width: 100%;
-    height: 200px;
+    height: auto;
     background: #222;
-    border: 1px solid #333;
+    border: 1px solid #ffffff;
     border-radius: 5px;
     box-shadow: inset 0 0 20px 0 #151515;
     padding: 20px 30px;
@@ -52,21 +35,27 @@
 }
 
 @media screen and (max-width: 1200px) {
+
+    /*
     .intro__card {
         width: 100%;
     }
+*/
 
     .intro__image {
-        float: none;
-        width: 60%;
+        width: 300px;
         height: 400px;
-        margin: 0 auto;
+        margin: 0;
+        z-index: 999999;
+        background: #a73030;
     }
 
     .intro__image img {
-        transform: translateY(-40%);
+        height: 100%;
+        transition: margin-top .1s;
     }
 
+    /*
     .intro__info {
         width: 100%;
         margin: 20px 0 0 0;
@@ -80,12 +69,36 @@
         text-align: center;
         margin-left: 0;
     }
+*/
+
 
 }
 
 @media screen and (max-width: 800px) {
+    .intro-card {
+        padding-bottom: 40px;
+    }
+
     .intro__image {
-        width: 100%;
+        width: 80%;
+        max-width: 250px;
+        margin: 0 auto;
         height: 300px;
+        border-radius: 0 0 5px 5px;
+    }
+
+    .intro__image img {
+        height: 100%;
+        width: auto;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .intro__name {
+        margin-top: 50px;
+    }
+
+    .intro__bio {
+        height: auto;
     }
 }
