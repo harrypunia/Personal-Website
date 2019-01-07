@@ -1,8 +1,8 @@
-const openHeader = (reset) => {
+const openHeader = (des) => {
     let header = document.getElementsByClassName('header')[0],
         burger = document.getElementsByClassName('burger')[0];
 
-    if (reset == 'reset') {
+    if (des == 'reset') {
         toggleDistortedText();
         header.classList.remove('openHeader');
         headerIsOpen = false;

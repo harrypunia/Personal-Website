@@ -1,15 +1,22 @@
+/*Fade Scroll*/
+
 fade-scroll {
     display: block;
     position: relative;
+    float: left;
     width: 100vw;
     min-width: 375px;
 }
+
+/*Distort text*/
 
 distort-text {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+/*Lazy divs*/
 
 lazy-component {
     display: block;
@@ -43,8 +50,21 @@ div[load-lazy] {
     transition: transform .4s ease-out, opacity .4s ease-out;
 }
 
+/*Hr*/
+
 hr {
     height: 1px;
     border: 0;
     background: white;
+}
+
+hr-text {
+    display: block;
+    position: relative;
+    color: white;
+    font-family: 'Mada', serif;
+    line-height: 1.5em;
+    text-align: center;
+    font-size: 2.5em;
+    margin: 40px 0;
 }
