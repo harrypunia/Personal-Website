@@ -57,12 +57,17 @@
 }
 
 .skill {
-    width: 60px;
-    height: 70px;
-    margin: 0 auto;
+    flex-basis: 20%;
+    margin: 20px 0;
 }
 
-.skill:nth-child(3n) {}
+.skill img {
+    width: 20%;
+    max-width: 100px;
+    min-width: 50px;
+    margin-left: 50%;
+    transform: translateX(-50%)
+}
 
 .skill p {
     text-align: center;
@@ -70,7 +75,7 @@
 }
 
 .intro__skills[open] {
-    height: 400px;
+    height: 500px;
     transition: .2s ease-out;
 }
 
@@ -144,5 +149,14 @@
         height: auto;
         width: 90%;
         margin: auto;
+    }
+
+    .intro__skills[open] {
+        height: 700px;
+        padding: 20px 40px;
+    }
+
+    .skill {
+        flex-basis: 50%;
     }
 }
