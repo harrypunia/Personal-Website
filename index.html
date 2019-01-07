@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="dist/style/intro.min.css">
     <link rel="stylesheet" href="dist/style/footer.min.css">
     <link rel="stylesheet" href="dist/style/filter.min.css">
+    <link rel="stylesheet" href="dist/style/case-study.min.css">
     <link rel="stylesheet" href="dist/style/customHTML.min.css">
     <script src="lib/p5.min.js"></script>
     <script src="dev/js/customHTML.js"></script>
@@ -37,9 +38,9 @@
     </div>
     <header class="header">
         <div class="wrapper text__medium define-text text__cinzel">
-            <header-element onclick="openHeader(); toggleDistortedText()" text="About me"></header-element>
-            <header-element onclick="openHeader(); toggleDistortedText()" text="Case Studies"></header-element>
-            <header-element onclick="openHeader(); toggleDistortedText()" text="Contact"></header-element>
+            <header-element text="About me"></header-element>
+            <header-element text="Case Studies"></header-element>
+            <header-element text="Contact"></header-element>
         </div>
     </header>
     <div class="container">
@@ -54,8 +55,8 @@
             <hr-text text="About me"></hr-text>
         </fade-scroll>
         <fade-scroll id="intro" class="intro">
-            <lazy-component class="wrapper--flex">
-                <div lazy class="intro__card">
+            <div class="lazy-component wrapper--flex" to="scale">
+                <div lazy class="define-card">
                     <div lazy to="up" class="intro__image">
                         <img src="assets/img/harry-1.jpg" alt="Harry Punia">
                     </div>
@@ -67,15 +68,16 @@
                     </div>
                     <div class="skills"></div>
                 </div>
-            </lazy-component>
+            </div>
         </fade-scroll>
         <fade-scroll>
             <hr-text text="Case Studies"></hr-text>
         </fade-scroll>
         <fade-scroll>
-            <lazy-component class="wrapper">
-                <case-study src="assets/img/harry-1.jpg" name="Project 1"></case-study>
-            </lazy-component>
+            <div class="lazy-component wrapper--flex" to="scale">
+                <div lazy to="up" class="case-study_wrapper define-card" style='height: 500px;'>
+                </div>
+            </div>
         </fade-scroll>
         <fade-scroll class="footer">
             <div class="wrapper">

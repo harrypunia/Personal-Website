@@ -5,15 +5,6 @@
     height: auto;
 }
 
-.intro__card {
-    width: 80%;
-    position: relative;
-    float: left;
-    max-width: 1400px;
-    background: #151515;
-    padding: 40px;
-}
-
 .intro__image {
     position: relative;
     float: left;

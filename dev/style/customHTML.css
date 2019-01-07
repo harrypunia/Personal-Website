@@ -18,9 +18,19 @@ distort-text {
 
 /*Lazy divs*/
 
-lazy-component {
-    display: block;
-    width: 80vw;
+.lazy-component {
+    background: red;
+}
+
+div[to="scale"] {
+    transform: scale3d(1, 0, 1);
+    transition: transform .4s ease-out;
+}
+
+div[loaded] {
+    transform: scale3d(1, 1, 1);
+    transform-origin: center top;
+    transition: transform .4s ease-out;
 }
 
 div[lazy] {
@@ -47,7 +57,7 @@ div[to="bottom"] {
 div[load-lazy] {
     opacity: 1;
     transform: translate3d(0, 0, 0);
-    transition: transform .4s ease-out, opacity .4s ease-out;
+    transition: transform .4s ease-out, opacity .4s ease-out, height .4s ease-out;
 }
 
 /*Hr*/

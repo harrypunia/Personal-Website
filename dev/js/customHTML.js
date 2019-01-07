@@ -136,11 +136,3 @@ class HrText extends HTMLElement {
 }
 
 window.customElements.define('hr-text', HrText);
-
-class CaseStudy extends HTMLElement {
-    constructor() {
-        super();
-    }
-}
-
-window.customElements.define('case-study', CaseStudy);

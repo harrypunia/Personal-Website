@@ -38,9 +38,10 @@ const toggleDistortedText = () => {
 
 const lazyElements = y => {
     //Lazy component
-    let lazyParents = document.getElementsByTagName('lazy-component');
+    let lazyParents = document.getElementsByClassName('lazy-component');
     for (let i = 0; i < lazyParents.length; i++) {
         let posY = (lazyParents[i].offsetTop - y) < -(window.innerHeight / 3);
+        console.log(lazyParents[i].offsetTop, i);
         if (!lazyParents[i].hasAttribute('loaded') && posY) {
             lazyParents[i].setAttribute('loaded', '');
             let lazyChildren = lazyParents[i].querySelectorAll('div[lazy]');
@@ -52,20 +53,37 @@ const lazyElements = y => {
     }
 }
 
+const headerElementsLinks = () => {
+    let webWidth = window.innerWidth >= 1400,
+        headerElements = document.getElementsByTagName('header-element');
+    if (webWidth) {
+        for (let i = 0; i < headerElements.length; i++) {
+            headerElements[i].setAttribute('onclick', '');
+        }
+    } else {
+        for (let i = 0; i < headerElements.length; i++) {
+            headerElements[i].setAttribute('onclick', 'openHeader(); toggleDistortedText()');
+        }
+    }
+}
+
 window.onscroll = () => {
     let y = window.pageYOffset;
     lazyElements(y);
 };
 
 window.onresize = () => {
+    let webWidth = window.innerWidth >= 1400;
     if (headerIsOpen) {
-        (window.innerWidth >= 1400) ? openHeader('reset'): 0;
+        webWidth ? openHeader('reset') : 0;
     }
     let y = window.pageYOffset;
     lazyElements(y);
+    headerElementsLinks();
 }
 
 window.onload = () => {
     let y = window.pageYOffset;
     lazyElements(y);
+    headerElementsLinks();
 }
