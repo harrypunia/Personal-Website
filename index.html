@@ -128,16 +128,27 @@
         </fade-scroll>
         <fade-scroll>
             <div class="lazy-component wrapper--flex" to="scale">
-                <div lazy to="up" class="case-study_wrapper define-card" style='height: 500px; display: flex; justify-content: center; align-items: center;'>
-                    <p class="define-text text__mada-bold text__large">Coming Soon</p>
+                <div lazy to="up" class="case-study_wrapper define-card" style='height: 500px; display: flex; justify-content: center; align-items: center; -webkit-text-stroke: 1px white;'>
+                    <p class="text__mada-bold text__large">Coming Soon</p>
                 </div>
             </div>
         </fade-scroll>
-        <fade-scroll class="footer">
-            <div class="wrapper">
-                <div id="contact"></div>
+        <div class="footer">
+            <div class="wrapper--flex lazy-component" style="align-items: flex-start">
+                <div lazy to="right" id="contact" class="social">
+                    <h1 class="define-text-hollow text__xlarge text__mada">Social</h1>
+                    <div class="social__links"></div>
+                </div>
+                <div lazy to="left" class="footer__extras">
+                    <div class="extras__contact">
+                        <h1 class="define-text-hollow text__xlarge text__mada">Contact</h1>
+                    </div>
+                    <div class="extras__other">
+                        <h1 class="define-text-hollow text__large text__mada">Others</h1>
+                    </div>
+                </div>
             </div>
-        </fade-scroll>
+        </div>
     </div>
     <script src="dev/js/call.js"></script>
     <script src="dev/js/particle.js"></script>

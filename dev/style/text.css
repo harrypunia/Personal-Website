@@ -4,6 +4,12 @@
     color: white;
 }
 
+.define-text-hollow {
+    line-height: 1.5em;
+    text-align: left;
+    -webkit-text-stroke: 1px white;
+}
+
 .text__small {
     font-size: 1.2em;
 }
