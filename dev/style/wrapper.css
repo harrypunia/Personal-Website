@@ -21,7 +21,7 @@
     width: 80%;
     max-width: 1800px;
     background: #151515;
-    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 .card--white {

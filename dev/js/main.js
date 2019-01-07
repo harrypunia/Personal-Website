@@ -23,6 +23,11 @@ const openHeader = (des) => {
     }
 }
 
+const toggleSkills = () => {
+    let skills = document.getElementsByClassName('intro__skills')[0];
+    skills.hasAttribute('open') ? skills.removeAttribute('open') : skills.setAttribute('open', '');
+}
+
 const toggleDistortedText = () => {
     let test = document.getElementsByTagName('distort-text');
     for (let i = 0; i < test.length; i++) {

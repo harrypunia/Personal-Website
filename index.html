@@ -58,7 +58,7 @@
             <hr-text text="About me"></hr-text>
         </fade-scroll>
         <fade-scroll id="intro" class="intro">
-            <div class="lazy-component wrapper--flex" to="scale">
+            <div class="lazy-component wrapper--flex" to="scale" style="flex-direction: column">
                 <div lazy class="define-card card--flex intro-card">
                     <div lazy to="right" class="intro__image">
                         <img class="parallax" src="assets/img/harry-1.jpg" alt="Harry Punia">
@@ -70,7 +70,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="intro__skills define-text text__mada text__regular">Skills</div>
+                <div class="intro__skills"></div>
+                <div class="skills__button define-text text__mada text__regular" onclick="toggleSkills()">Skills</div>
             </div>
         </fade-scroll>
         <fade-scroll>
