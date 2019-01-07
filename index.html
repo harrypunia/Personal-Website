@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="dist/style/wrapper.min.css">
     <link rel="stylesheet" href="dist/style/button.min.css">
     <link rel="stylesheet" href="dist/style/text.min.css">
-    <link rel="stylesheet" href="dist/style/fonts.min.css">
+    <link rel="stylesheet" href="dev/style/fonts.css">
     <link rel="stylesheet" href="dist/style/header.min.css">
     <link rel="stylesheet" href="dist/style/hero.min.css">
     <link rel="stylesheet" href="dist/style/intro.min.css">
@@ -32,6 +32,9 @@
 <body>
     <div id="canvas"></div>
     <filter></filter>
+    <div id="scroll-bar">
+        <div id="progress"></div>
+    </div>
     <div class="burger" onclick="openHeader(); toggleDistortedText()">
         <div class="bar1 bars"></div>
         <div class="bar2 bars"></div>
@@ -46,9 +49,9 @@
     <div class="container">
         <fade-scroll class="hero">
             <div class="hero__text">
-                <distort-text onload dir="in" text="Hey_there" class="define-text text__medium text__mada"></distort-text>
+                <distort-text onload dir="in" text="Meet_your_next" class="define-text text__medium text__mada"></distort-text>
                 <distort-text onload dir="in" text="Harry_Punia" class="define-text text__xlarge text__cinzel"></distort-text>
-                <distort-text onload dir="in" text="Designer_•_Developer" class="define-text text__medium text__mada"></distort-text>
+                <distort-text onload dir="in" text="Designer_/_Developer" class="define-text text__medium text__mada"></distort-text>
             </div>
         </fade-scroll>
         <fade-scroll>
@@ -57,13 +60,13 @@
         <fade-scroll id="intro" class="intro">
             <div class="lazy-component wrapper--flex" to="scale">
                 <div lazy class="define-card">
-                    <div lazy to="up" class="intro__image">
-                        <img src="assets/img/harry-1.jpg" alt="Harry Punia">
+                    <div lazy to="right" class="intro__image">
+                        <img class="parallax" src="assets/img/harry-1.jpg" alt="Harry Punia">
                     </div>
                     <div class="intro__info">
-                        <div lazy to="up" class="intro__name define-text text__large text__mada-bold">Harry Punia / <span class="text--fade">Harsimran Punia</span></div>
+                        <div lazy to="left" class="intro__name define-text text__large text__mada-bold">Harry Punia / <span class="text--fade">Harsimran Punia</span></div>
                         <div lazy to="up" class="intro__bio">
-                            <p class="define-text text__regular text__mada text--fade-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id vel temporibus repellat odio, optio saepe. Autem quidem nisi nesciunt similique expedita dicta unde mollitia. Iure fugiat aliquid minima quod nisi.</p>
+                            <p class="define-text text__regular text__mada text--fade-light">A little about myself. Born in India I was always praised as an artist since my early childhood. My obsession with anime at an early age got me into sketching my favorite characters everyday.</p>
                         </div>
                     </div>
                     <div class="skills"></div>

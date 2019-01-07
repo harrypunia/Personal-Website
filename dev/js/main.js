@@ -41,7 +41,6 @@ const lazyElements = y => {
     let lazyParents = document.getElementsByClassName('lazy-component');
     for (let i = 0; i < lazyParents.length; i++) {
         let posY = (lazyParents[i].offsetTop - y) < -(window.innerHeight / 3);
-        console.log(lazyParents[i].offsetTop, i);
         if (!lazyParents[i].hasAttribute('loaded') && posY) {
             lazyParents[i].setAttribute('loaded', '');
             let lazyChildren = lazyParents[i].querySelectorAll('div[lazy]');
@@ -67,23 +66,44 @@ const headerElementsLinks = () => {
     }
 }
 
+const parallax = y => {
+    let target = document.getElementsByClassName('parallax');
+    for (let i = 0; i < target.length; i++) {
+        console.log(target[i].offsetTop - y)
+    }
+}
+
+const updateScrollBar = y => {
+    let bar = document.getElementById('progress'),
+        pageHeight = Math.max(document.body.scrollHeight, document.body.offsetHeight),
+        progress = ((y + window.innerHeight) / pageHeight) * 100;
+    bar.style.height = progress + 'vh';
+}
+
 window.onscroll = () => {
     let y = window.pageYOffset;
     lazyElements(y);
+    updateScrollBar(y);
+    parallax(y);
 };
 
 window.onresize = () => {
-    let webWidth = window.innerWidth >= 1400;
+    let webWidth = window.innerWidth >= 1400,
+        y = window.pageYOffset;
+
     if (headerIsOpen) {
         webWidth ? openHeader('reset') : 0;
     }
-    let y = window.pageYOffset;
     lazyElements(y);
     headerElementsLinks();
+    parallax(y);
+    updateScrollBar(y);
 }
 
 window.onload = () => {
     let y = window.pageYOffset;
     lazyElements(y);
     headerElementsLinks();
+    updateScrollBar(y);
+    parallax(y);
 }
