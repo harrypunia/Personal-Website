@@ -34,14 +34,27 @@
     margin-top: 20px;
 }
 
+/*Skills*/
+.intro__skills {
+    position: absolute;
+    left: 50vw;
+    top: 100%;
+    transform: translate(-50%, -40px);
+    background: #4d4141;
+    width: 80px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    border-radius: 0 0 2px 2px;
+    transition: height .2s;
+}
+
+.intro__skills:hover {
+    height: 35px;
+}
+
 @media screen and (max-width: 1200px) {
-
-    /*
-    .intro__card {
-        width: 100%;
-    }
-*/
-
     .intro__image {
         width: 300px;
         height: 400px;
@@ -54,29 +67,15 @@
         height: 100%;
         transition: margin-top .1s;
     }
-
-    /*
-    .intro__info {
-        width: 100%;
-        margin: 20px 0 0 0;
-    }
-
-    .intro__bio {
-        height: 150px;
-    }
-
-    .intro__name {
-        text-align: center;
-        margin-left: 0;
-    }
-*/
-
-
 }
 
 @media screen and (max-width: 800px) {
     .intro-card {
         padding-bottom: 40px;
+    }
+
+    .intro__skills {
+        transform: translate(-50%, -80px);
     }
 
     .intro__image {
