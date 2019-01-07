@@ -66,7 +66,14 @@
     max-width: 100px;
     min-width: 50px;
     margin-left: 50%;
-    transform: translateX(-50%)
+    transform: translate(-50%, -50%) rotate(30deg);
+    opacity: 0;
+    transition: transform .1s ease-out, opacity .2s ease-out;
+}
+
+.skill img:hover {
+    transform: translate(-50%, 0) rotate(10deg) !important;
+    transition: transform .1s ease-in;
 }
 
 .skill p {
@@ -77,6 +84,12 @@
 .intro__skills[open] {
     height: 500px;
     transition: .2s ease-out;
+}
+
+.intro__skills[open] .skill img {
+    opacity: 1;
+    transform: translate(-50%, 0);
+    transition: transform .2s ease-in, opacity .2s ease-in;
 }
 
 .skills__button {
@@ -158,5 +171,11 @@
 
     .skill {
         flex-basis: 50%;
+    }
+
+    .skill img:hover {
+        transform: translate(-50%, 0) rotate(0) !important;
+        cursor: default;
+        transition: transform .1s ease-in;
     }
 }
