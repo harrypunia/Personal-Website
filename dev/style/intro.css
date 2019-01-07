@@ -1,5 +1,6 @@
 .intro {
     position: relative;
+    display: block;
     float: left;
     width: 100vw;
     height: auto;
@@ -16,9 +17,11 @@
 .intro__image img {
     width: 100%;
     height: auto;
+    display: block;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%)
+    transform: translateY(-50%);
+    transition: margin-top .2s;
 }
 
 .intro__info {

@@ -37,6 +37,7 @@ Particle.prototype.airFriction = function () {
     this.vel.x < -.5 ? this.vel.x++ : 0;
     this.vel.y < -.5 ? this.vel.y++ : 0;
 }
+
 Particle.prototype.applyForce = function (force) {
     this.acc.add(force);
 }
