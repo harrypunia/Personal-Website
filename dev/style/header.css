@@ -60,6 +60,7 @@
     .convertBurger {
         left: 200px;
         background: rgba(0, 0, 0, 0.6);
+        -webkit-backdrop-filter: blur(10px);
         border-left: 1px solid #666;
         transition: border .2s, left .2s ease-in;
     }
@@ -192,9 +193,9 @@
     }
 
     .header {
-        background: rgba(0, 0, 0, 0.9);
+        background: rgba(0, 0, 0, 0.5);
+        -webkit-backdrop-filter: blur(10px);
         top: -100%;
-        -webkit-backdrop-filter: blur(5px);
         left: 10%;
         width: 80%;
         height: 90%;

@@ -24,8 +24,19 @@ const openHeader = (des) => {
 }
 
 const toggleSkills = () => {
-    let skills = document.getElementsByClassName('intro__skills')[0];
-    skills.hasAttribute('open') ? skills.removeAttribute('open') : skills.setAttribute('open', '');
+    let skills = document.getElementsByClassName('intro__skills')[0],
+        componenets = skills.getElementsByTagName('skill-component');
+    if (skills.hasAttribute('open')) {
+        skills.removeAttribute('open');
+        for (let i = 0; i < componenets.length; i++) {
+            componenets[i].removeAttribute('open');
+        }
+    } else {
+        skills.setAttribute('open', '');
+        for (let i = 0; i < componenets.length; i++) {
+            componenets[i].setAttribute('open', '');
+        }
+    }
 }
 
 const toggleDistortedText = () => {
