@@ -1,1 +1,130 @@
-<!DOCTYPE html><html lang="en"><head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <link rel="stylesheet" href="dist/style/harrypunia.css"> <script src="lib/p5.min.js"></script> <title>Harry Punia</title></head><body> <div id="canvas"></div><div class="container"> <div class="burger" onclick="openHeader()"></div><div class="header"> <div class="wrapper text__medium define-text text__mada"> <div class="header__elements"> <p id="work" class="distort_hover">Work</p></div><div class="header__elements"> <p id="contact" class="distort_hover">Contact</p></div></div></div><div class="hero fade_scroll"> <div class="wrapper"> <div class="hero__text"> <div id="test" class="hero__text-line-1 hero__text-lines define-text text__medium text__mada"></div><div id="test2" class="hero__text-line-1 hero__text-lines define-text text__xlarge text__cinzel"></div><div id="test3" class="hero__text-line-1 hero__text-lines define-text text__medium text__mada"></div></div></div></div><div id="body__coming-soon" class="body fade_scroll"> <div class="wrapper"> <h2 id="coming-soon" class="text__mada-regular text__medium">Coming Soon</h2> </div></div><div class="footer fade_scroll"> <div class="wrapper"></div></div></div><script src="dist/js/harrypunia.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<!--          __Welcome__
+         
+    • Designed and Developed by: Harry Punia
+    
+    • GitHub: https://github.com/harrypunia
+    • Contact: harry@punias.com
+-->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/style/global.min.css">
+    <link rel="stylesheet" href="dist/style/reset.min.css">
+    <link rel="stylesheet" href="dist/style/wrapper.min.css">
+    <link rel="stylesheet" href="dist/style/button.min.css">
+    <link rel="stylesheet" href="dist/style/text.min.css">
+    <link rel="stylesheet" href="dev/style/fonts.css">
+    <link rel="stylesheet" href="dist/style/header.min.css">
+    <link rel="stylesheet" href="dist/style/hero.min.css">
+    <link rel="stylesheet" href="dist/style/intro.min.css">
+    <link rel="stylesheet" href="dist/style/footer.min.css">
+    <link rel="stylesheet" href="dist/style/filter.min.css">
+    <link rel="stylesheet" href="dist/style/case-study.min.css">
+    <link rel="stylesheet" href="dist/style/customHTML.min.css">
+    <script src="lib/p5.min.js"></script>
+    <script src="dev/js/customHTML.js"></script>
+    <title>Harry Punia</title>
+</head>
+
+<body>
+    <div id="canvas"></div>
+    <filter></filter>
+    <div id="scroll-bar">
+        <div id="progress"></div>
+    </div>
+    <div class="burger" onclick="openHeader(); toggleDistortedText()">
+        <div class="bar1 bars"></div>
+        <div class="bar2 bars"></div>
+    </div>
+    <header class="header">
+        <div class="wrapper text__medium define-text text__cinzel">
+            <header-element text="About me"></header-element>
+            <header-element text="Case Studies"></header-element>
+            <header-element text="Contact"></header-element>
+        </div>
+    </header>
+    <div class="container">
+        <fade-scroll class="hero">
+            <div class="hero__text">
+                <distort-text onload dir="in" text="Meet_your_next" class="define-text text__medium text__mada"></distort-text>
+                <distort-text onload dir="in" text="Harry_Punia" class="define-text text__xlarge text__cinzel"></distort-text>
+                <distort-text onload dir="in" text="Designer_/_Developer" class="define-text text__medium text__mada"></distort-text>
+            </div>
+        </fade-scroll>
+        <fade-scroll>
+            <hr-text text="About me"></hr-text>
+        </fade-scroll>
+        <fade-scroll id="intro" class="intro">
+            <div class="lazy-component wrapper--flex" to="scale" style="flex-direction: column">
+                <div lazy class="define-card card--flex intro-card">
+                    <div lazy to="right" class="intro__image">
+                        <img class="parallax" src="assets/img/harry-1.jpg" alt="Harry Punia">
+                    </div>
+                    <div class="intro__info">
+                        <div lazy to="left" class="intro__name define-text text__large text__mada-bold">Harry Punia / <span class="text--fade">Harsimran Punia</span></div>
+                        <div lazy to="up" class="intro__bio">
+                            <p class="define-text text__regular text__mada text--fade-light">A little about myself. Born in India I was always praised as an artist since my early childhood. My obsession with anime at an early age got me into sketching my favorite characters everyday.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="intro__skills define-text text__mada-bold text__regular">
+                    <skill-component src="assets/img/html.svg" alt="SVG" text="HTML"></skill-component>
+                    <skill-component src="assets/img/css.svg" alt="CSS" text="Css"></skill-component>
+                    <skill-component src="assets/img/js.svg" alt="JS" text="Javascript"></skill-component>
+                    <skill-component src="assets/img/p5.png" alt="p5" text="P5"></skill-component>
+                    <skill-component src="assets/img/3js.svg" alt="THREEJS" text="Three Js"></skill-component>
+                    <skill-component src="assets/img/arduino.png" alt="Arduino" text="Arduino"></skill-component>
+                    <skill-component src="assets/img/github.svg" alt="GitHub" text="Github"></skill-component>
+                    <skill-component src="assets/img/photoshop.svg" alt="Photoshop" text="Photoshop"></skill-component>
+                    <skill-component src="assets/img/illustrator.svg" alt="Illustrator" text="Illustrator"></skill-component>
+                    <skill-component src="assets/img/indesign.svg" alt="InDesign" text="InDesign"></skill-component>
+                    <skill-component src="assets/img/premiere.svg" alt="Premiere Pro" text="Premiere Pro"></skill-component>
+                    <skill-component src="assets/img/cinema.png" alt="Cinema 4d" text="Cinema 4d"></skill-component>
+                </div>
+                <div class="skills__button define-text text__mada text__regular" onclick="toggleSkills()">Skills</div>
+            </div>
+        </fade-scroll>
+        <fade-scroll>
+            <hr-text text="Case Studies"></hr-text>
+        </fade-scroll>
+        <fade-scroll>
+            <div class="lazy-component wrapper--flex" to="scale">
+                <div lazy to="up" class="case-study_wrapper define-card" style='height: 500px; display: flex; justify-content: center; align-items: center; -webkit-text-stroke: 1px white;'>
+                    <p class="text__mada-bold text__large">Coming Soon</p>
+                </div>
+            </div>
+        </fade-scroll>
+        <div class="footer">
+            <div class="wrapper--flex lazy-component" style="align-items: flex-start">
+                <div lazy to="right" id="contact" class="social">
+                    <h1 class="define-text-hollow text__xlarge text__mada">Social</h1>
+                    <div class="social__links">
+                        <a href="https://www.instagram.com/" target="_blank" rel="noreferrer noopener"><img src="assets/img/instagram.svg" alt="Instagram"></a>
+                        <a href="https://dribbble.com/harrypunia" target="_blank" rel="noreferrer noopener"><img src="assets/img/dribble-logo.svg" alt="Dribble"></a>
+                        <a href="https://github.com/harrypunia" target="_blank" rel="noreferrer noopener"><img src="assets/img/github_social.svg" alt="GitHub"></a>
+                    </div>
+                </div>
+                <div class="footer__extras">
+                    <div lazy to="left" class="extras__contact">
+                        <h1 class="define-text-hollow text__xlarge text__mada">Contact</h1>
+                        <p class="contact__phone define-text text__regular text__mada">+1 (905) 467 8671</p>
+                        <p class="contact__mail define-text text__regular text__mada">harry@punias.com</p>
+                    </div>
+                    <div lazy to="left" class="extras__other">
+                        <h1 class="define-text-hollow text__large text__mada">Others</h1>
+                        <p class="others__des">Privacy Policy</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="dev/js/call.js"></script>
+    <script src="dev/js/particle.js"></script>
+    <script src="dev/js/canvas.js"></script>
+    <script src="dev/js/main.js"></script>
+</body>
+
+</html>
