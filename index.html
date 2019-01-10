@@ -43,9 +43,9 @@
     </div>
     <header class="header">
         <div class="wrapper text__regular define-text text__cinzel">
-            <header-element text="Case Studies"></header-element>
-            <header-element text="Blog"></header-element>
-            <header-element text="Contact"></header-element>
+            <header-element link="#caseStudies" text="Case Studies"></header-element>
+            <header-element link="http://blog.harrypunia.com" text="Blog"></header-element>
+            <header-element link="#footer" text="Contact"></header-element>
         </div>
     </header>
     <div class="container">
@@ -92,14 +92,14 @@
         <fade-scroll>
             <hr-text text="Case Studies"></hr-text>
         </fade-scroll>
-        <fade-scroll>
+        <fade-scroll id="caseStudies">
             <div class="lazy-component wrapper--flex" to="scale">
                 <div lazy to="up" class="case-study_wrapper define-card" style='height: 500px; display: flex; justify-content: center; align-items: center; -webkit-text-stroke: 1px white;'>
                     <p class="text__mada-bold text__large">Coming Soon</p>
                 </div>
             </div>
         </fade-scroll>
-        <div class="footer">
+        <div id="footer" class="footer">
             <div class="wrapper--flex lazy-component" style="align-items: flex-start">
                 <div lazy to="right" id="contact" class="social">
                     <h1 class="define-text-hollow text__xlarge text__mada">Social</h1>
@@ -128,4 +128,5 @@
     <script src="dev/js/canvas.js"></script>
     <script src="dev/js/main.js"></script>
 </body>
+
 </html>
