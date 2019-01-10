@@ -1,11 +1,14 @@
 body,
 html {
-    margin: 0px;
-    padding: 0px;
     font-size: 62.5%;
+}
+
+body {
+    overflow-x: hidden;
     width: 100vw;
     min-width: 375px;
-    overflow-x: hidden;
+    margin: 0px;
+    padding: 0px;
     scroll-behavior: smooth;
 }
 
