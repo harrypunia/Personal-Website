@@ -11,6 +11,7 @@ body {
 
 body {
     overflow-x: hidden;
+    float: left;
 }
 
 * {
@@ -54,14 +55,6 @@ a {
     height: 0px;
     background: #db4444;
     transition: height .2s ease-in-out;
-}
-
-reset-body {
-    position: relative;
-    float: left;
-    widtH: 50px;
-    height: 10px;
-    background: white;
 }
 
 img {
