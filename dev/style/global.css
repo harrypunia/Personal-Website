@@ -1,15 +1,16 @@
-body,
-html {
-    font-size: 62.5%;
-}
-
+html,
 body {
-    overflow-x: hidden;
+    font-size: 62.5%;
     width: 100vw;
     min-width: 375px;
     margin: 0px;
     padding: 0px;
+    min-height: 100%;
     scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
 }
 
 * {
@@ -53,6 +54,14 @@ a {
     height: 0px;
     background: #db4444;
     transition: height .2s ease-in-out;
+}
+
+reset-body {
+    position: relative;
+    float: left;
+    widtH: 50px;
+    height: 10px;
+    background: white;
 }
 
 img {

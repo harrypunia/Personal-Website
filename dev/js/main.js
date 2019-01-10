@@ -95,6 +95,7 @@ const updateScrollBar = y => {
     let bar = document.getElementById('progress'),
         pageHeight = Math.max(document.body.scrollHeight, document.body.offsetHeight),
         progress = ((y + window.innerHeight) / pageHeight) * 100;
+    //say();
     bar.style.height = progress + 'vh';
 }
 
