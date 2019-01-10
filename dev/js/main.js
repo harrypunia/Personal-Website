@@ -37,6 +37,12 @@ const toggleSkills = () => {
             componenets[i].setAttribute('open', '');
         }
     }
+    setTimeout(() => {
+        let y = window.pageYOffset;
+        lazyElements(y);
+        updateScrollBar(y);
+        parallax(y);
+    }, 1000)
 }
 
 const toggleDistortedText = () => {
@@ -50,6 +56,7 @@ const toggleDistortedText = () => {
             test[i].setAttribute('dir', 'in');
         }
     }
+    updateFadeScroll();
 }
 
 const lazyElements = y => {
