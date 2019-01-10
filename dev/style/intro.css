@@ -56,32 +56,6 @@
     padding: 0 40px;
 }
 
-/*
-.skill {
-    flex-basis: 20%;
-    margin: 20px 0;
-}
-
-.skill img {
-    width: 20%;
-    max-width: 100px;
-    min-width: 50px;
-    margin-left: 50%;
-    transform: translate(-50%, -50%) rotate(30deg);
-    opacity: 0;
-    transition: transform .1s ease-out, opacity .2s ease-out;
-}
-
-.skill img:hover {
-    transform: translate(-50%, 0) rotate(10deg) !important;
-    transition: transform .1s ease-in;
-}
-
-.skill p {
-    text-align: center;
-    margin-top: 5px;
-}
-*/
 .intro__skills[open] {
     height: 500px;
     transition: .2s ease-out;
