@@ -85,7 +85,6 @@ const headerElementsLinks = () => {
 const parallax = y => {
     let target = document.getElementsByClassName('parallax');
     for (let i = 0; i < target.length; i++) {
-        console.log();
         let _posY = ((target[i].getBoundingClientRect().top - (window.innerHeight / 2) + (target[i].offsetHeight / 2)) / window.innerHeight) * 40,
             posY = _posY > 20 ? 20 : _posY < -20 ? -20 : _posY;
         target[i].style.marginTop = posY + 'px';
