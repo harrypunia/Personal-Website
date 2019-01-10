@@ -57,14 +57,8 @@
 }
 
 .intro__skills[open] {
-    height: 500px;
+    height: auto;
     transition: .2s ease-out;
-}
-
-.intro__skills[open] .skill img {
-    opacity: 1;
-    transform: translate(-50%, 0);
-    transition: transform .2s ease-in, opacity .2s ease-in;
 }
 
 .skills__button {
@@ -140,7 +134,7 @@
     }
 
     .intro__skills[open] {
-        height: 700px;
+        height: auto;
         padding: 20px 40px;
     }
 
