@@ -7,17 +7,17 @@ const openHeader = (des) => {
         header.classList.remove('openHeader');
         headerIsOpen = false;
         burger.classList.remove('convertBurger');
-        filter.classList.remove('show-filter');
+        filter.removeAttribute('open');
     } else {
         if (headerIsOpen) {
             header.classList.remove('openHeader');
             burger.classList.remove('convertBurger');
-            filter.classList.remove('show-filter');
+            filter.removeAttribute('open');
             headerIsOpen = false;
         } else {
             header.classList.add('openHeader');
             burger.classList.add('convertBurger');
-            filter.classList.add('show-filter');
+            filter.setAttribute('open', '');
             headerIsOpen = true;
         }
     }
