@@ -20,8 +20,8 @@ class CaseStudy extends HTMLElement {
         this.img.setAttribute('alt', this.alt);
         this.heading.textContent = this._heading;
         this.bio.textContent = this._bio;
-        this.css.textContent = '.wrapper{position: relative; width: 100%; height: 100px; background: red;}' +
-            '.wrapper img{float: left;width: 100px; height: 100px;}' +
+        this.css.textContent = '.wrapper{position: relative; width: 100%; height: 100px; background: white; margin: 100px 0;}' +
+            '.wrapper img{position: absolute; left: 0; top: -25px; width: 150px; height: 150px; box-shadow: 0 0 20px rgba(0, 0, 0, .4)}' +
             '.wrapper h1{float: left; color: white}' +
             '.wrapper p{float: left; color: white}'
 
