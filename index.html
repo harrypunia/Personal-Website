@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="dist/style/button.min.css" />
     <link rel="stylesheet" href="dist/style/text.min.css" />
     <link rel="stylesheet" href="dev/style/fonts.css" />
+    <link rel="stylesheet" href="dist/style/card.min.css" />
     <link rel="stylesheet" href="dist/style/header.min.css" />
     <link rel="stylesheet" href="dist/style/hero.min.css" />
     <link rel="stylesheet" href="dist/style/intro.min.css" />
@@ -27,7 +28,12 @@
     <link rel="stylesheet" href="dist/style/customHTML.min.css" />
     <script src="lib/p5.min.js"></script>
     <script src="dev/js/help.js"></script>
-    <script src="dev/js/customHTML.js"></script>
+    <script src="dev/js/customHTML/ch-distortText.js"></script>
+    <script src="dev/js/customHTML/ch-fadeScroll.js"></script>
+    <script src="dev/js/customHTML/ch-headerElement.js"></script>
+    <script src="dev/js/customHTML/ch-hrText.js"></script>
+    <script src="dev/js/customHTML/ch-skills.js"></script>
+    <script src="dev/js/customHTML/ch-caseStudy.js"></script>
     <title>Harry Punia</title>
 </head>
 
@@ -94,8 +100,8 @@
         </fade-scroll>
         <fade-scroll id="caseStudies">
             <div class="lazy-component wrapper--flex" to="scale">
-                <div lazy to="up" class="case-study_wrapper define-card" style='height: 500px; display: flex; justify-content: center; align-items: center; -webkit-text-stroke: 1px white;'>
-                    <p class="text__mada-bold text__large">Coming Soon</p>
+                <div lazy to="up" class="case-study_wrapper define-card card--padding">
+                    <case-study src="assets/img/favicon.png" alt="testing" title="Test" bio="This is a testing"></case-study>
                 </div>
             </div>
         </fade-scroll>
