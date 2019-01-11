@@ -41,24 +41,26 @@
 /*Skills*/
 .intro__skills {
     width: 80%;
-    height: 0px;
+    height: auto;
+    max-height: 0px;
     max-width: 1800px;
     position: relative;
     overflow: hidden;
     background: #181818;
-    transition: .2s ease-out;
-    border-bottom: 1px solid #bababa;
+    border-radius: 0 5px 5px 0;
     z-index: -1;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     padding: 0 40px;
+    transition: max-height .4s ease-out;
 }
 
 .intro__skills[open] {
-    height: auto;
-    transition: .2s ease-out;
+    max-height: 500px;
+    border-bottom: 1px solid #bababa;
+    transition: max-height .4s ease-out;
 }
 
 .skills__button {
@@ -134,7 +136,7 @@
     }
 
     .intro__skills[open] {
-        height: auto;
+        max-height: 5000px;
         padding: 20px 40px;
     }
 
