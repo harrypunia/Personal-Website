@@ -1,4 +1,13 @@
-var sketch = document.getElementById('canvas');
+var sketch = document.getElementById('canvas'),
+    prevScrollPos = window.pageYOffset,
+    particles = [],
+    population = 50,
+    chance = 150,
+    resizing = true,
+    scrollModerator = 20,
+    scrollLimit = 10,
+    once = true,
+    force = 20;
 
 const applyScrollForce = e => {
     let forceDir = (prevScrollPos - window.pageYOffset) / scrollModerator;
@@ -11,8 +20,8 @@ const applyScrollForce = e => {
 }
 
 function setup() {
-    let w = sketch.offsetWidth < 375 ? 375 : sketch.offsetWidth;
-    canvas = createCanvas(w, window.innerHeight, P2D);
+    let w = sketch.offsetWidth < 375 ? 375 : sketch.offsetWidth,
+        canvas = createCanvas(w, window.innerHeight, P2D);
     canvas.parent(sketch);
     for (let i = 0; i < 50; i++) {
         particles[i] = new Particle(Math.random() * window.innerWidth, Math.random() * window.innerHeight);
