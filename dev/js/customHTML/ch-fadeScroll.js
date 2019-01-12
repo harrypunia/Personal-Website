@@ -2,7 +2,7 @@ class FadeScroll extends HTMLElement {
     constructor() {
         super();
         window.addEventListener('scroll', () => {
-            this.fade();
+            //            this.fade();
         });
     }
     fade() {

@@ -20,7 +20,7 @@ class SkillComponent extends HTMLElement {
             '.skill p {text-align: center; marign-top: 5px}' +
             '.skill[open] img {opacity: 1; transform: translate(-50%, 0); transition: transform .2s ease-in, opacity .2s ease-in;}' +
             '@media screen and (max-width: 800px) {' +
-            '.skill {flex-basis: 50%}' +
+            '.skill {flex-basis: 20%}' +
             '.skill img:hover {transform: translate(-50%, 0) rotate(0) !important; cursor: default; transition: transform .1s ease-in}' +
             '}';
         text.textContent = _text;

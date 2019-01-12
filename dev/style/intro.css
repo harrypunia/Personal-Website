@@ -135,9 +135,14 @@
         margin: auto;
     }
 
+    .intro__skills {
+        padding: 0;
+    }
+
     .intro__skills[open] {
-        max-height: 5000px;
-        padding: 20px 40px;
+        max-height: 500px;
+        padding: 20px 0px;
+        overflow-y: scroll;
     }
 
     .skill {

@@ -1,5 +1,5 @@
 .define-card {
-    width: 80%;
+    width: 90%;
     max-width: 1800px;
     background: rgba(21, 21, 21, 0.8);
     border-radius: 5px;
@@ -26,13 +26,13 @@
     flex-direction: row;
 }
 
-@media and screen (max-width: 1200px) {
+@media screen and (max-width: 1200px) {
     .define-card {
-        width: 90%;
+        width: 95%;
     }
 }
 
-@media and screen (max-width: 800px) {
+@media screen and (max-width: 800px) {
     .define-card {
         width: 100%;
     }
