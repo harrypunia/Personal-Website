@@ -157,6 +157,10 @@
         left transition: border .2s, top .2s ease-in;
     }
 
+    .bars {
+        widtH: 30px;
+    }
+
     .burger:hover .bar1 {
         transform: translateY(7px);
     }

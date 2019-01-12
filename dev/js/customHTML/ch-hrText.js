@@ -24,7 +24,7 @@ class HrText extends HTMLElement {
         leftAr.setAttribute('src', 'assets/img/hr-arrow.svg');
         bottomHr.setAttribute('class', 'hr-bottom');
         css.textContent = '.hr-wrapper {width: 100%; height: 50px; padding: 0 10%; box-sizing: border-box; display: flex; flex-direction: row; justify-content: center; align-items: center}' +
-            '.hr-bottom{display: none;  width: 80%; border-top: 1px solid white; border-top: 1px solid white; border-left: 0; border-right: 0; height: 3px; margin: 0 auto}' +
+            '.hr-bottom{display: none;  width: 100%; border-top: 1px solid #bababa; border-top: 1px solid #bababa; border-left: 0; border-right: 0; height: 3px; margin: 0 auto; opacity: 0.8}' +
             '.hr-line {display: block; border: 0; height: 1px; background: white; width: 33%; margin: 0 auto}' +
             '.left-arrow {transform: rotate(180deg);}' +
             '.hr-arrow {display: block; width: 25px; height: 25px}' +

@@ -154,4 +154,15 @@
         cursor: default;
         transition: transform .1s ease-in;
     }
+
+    .skills__button {
+        width: 150px;
+        height: 50px;
+        line-height: 50px;
+    }
+
+    .skills__button:hover {
+        height: 50px;
+        background: #a73030;
+    }
 }
