@@ -33,10 +33,10 @@ class CaseStudy extends HTMLElement {
             '.right {right: -1px !important; left: auto;}' +
             'img{width: auto; height: 400px; transition: transform .2s ease-out}' +
             '.wrapper:hover img {transform: scale3d(0.8, 0.8, 1); transition: transform .2s ease-out}' +
-            '.content{display: flex; justify-content: center; align-items: center; flex-direction: column; width: 50%; max-width: 800px; height: 80%; margin-left: 200px}' +
+            '.content{display: flex; justify-content: center; align-items: center; flex-direction: column; width: 60%; max-width: 800px; height: 60%; margin-left: 200px}' +
             '.right + .content{margin-left: 0 !important; margin-right: 200px}' +
-            '.wrapper h1{float: left; color: #333}' +
-            '.wrapper p{float: left; color: #333}' +
+            '.wrapper h1{float: left; color: #efefef; font-size: 24px; font-weight: 600; font-family: "Mada";text-align: left; width: 100%; line-height: 1.5}' +
+            '.wrapper p{float: left; color: #bababa; text-align: left; width: 100%;font-size: 18px; font-family: "Mada"; line-height: 1.5}' +
             /*media*/
             '@media screen and (max-width: 1000px) {' +
             '.wrapper{height: 400px; margin: 200px 0;}' +
