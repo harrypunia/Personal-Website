@@ -33,8 +33,8 @@ class CaseStudy extends HTMLElement {
             '.right {right: -1px !important; left: auto;}' +
             'img{width: auto; height: 400px; transition: transform .2s ease-out}' +
             '.wrapper:hover img {transform: scale3d(0.8, 0.8, 1); transition: transform .2s ease-out}' +
-            '.content{width: 50%; height: 80%; background: red; margin-left: 200px}' +
-            '.right .content{margin-left: 0 !important; margin-right: 200px;}' +
+            '.content{display: flex; justify-content: center; align-items: center; flex-direction: column; width: 50%; max-width: 800px; height: 80%; margin-left: 200px}' +
+            '.right + .content{margin-left: 0 !important; margin-right: 200px}' +
             '.wrapper h1{float: left; color: #333}' +
             '.wrapper p{float: left; color: #333}' +
             /*media*/
@@ -42,6 +42,13 @@ class CaseStudy extends HTMLElement {
             '.wrapper{height: 400px; margin: 200px 0;}' +
             '.img-wrapper {width: 400px; height: 250px; left: 50%; transform: translateX(-50%)}' +
             '.img-wrapper:hover img {transform: scale3d(0.8, 0.8, 1)}' +
+            '.content {margin-left: 0; width: 80%; height: 200px; margin-top: 150px;}' +
+            '.right + .content {margin-right: 0}' +
+            '}' +
+            '@media screen and (max-width: 800px) {' +
+            '.img-wrapper{width: 100%}' +
+            '.img-wrapper img {width: 100%; height: auto}' +
+            '.content {width: 100%;}' +
             '}';
         this.imgWrapper.appendChild(this.img);
         this.shadow.appendChild(this.css);
