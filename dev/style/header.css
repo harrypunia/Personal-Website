@@ -2,9 +2,13 @@
     position: fixed;
     width: 200px;
     height: 100vh;
+    left: -200px;
     user-select: none;
     backface-visibility: hidden;
     z-index: 999999;
+    animation: header_in .4s ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: .2s;
 }
 
 .burger {
@@ -211,5 +215,11 @@
     .openHeader {
         transform: translate3d(0, 100%, 0);
         transition: transform .4s ease-out;
+    }
+}
+
+@keyframes header_in {
+    to {
+        left: 0;
     }
 }
