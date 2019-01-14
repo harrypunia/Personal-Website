@@ -5,9 +5,16 @@
 }
 
 .define-text-hollow {
+    cursor: default;
     line-height: 1.5em;
+    letter-spacing: .1em;
     text-align: left;
     -webkit-text-stroke: 1px white;
+}
+
+.define-text-hollow:hover {
+    color: white;
+    -webkit-text-stroke: 0;
 }
 
 .text__small {

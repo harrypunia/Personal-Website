@@ -1,3 +1,7 @@
-.case-study__wrapper {
-    
+.case-study__wrapper {}
+
+.case-heading {
+    width: 100%;
+    text-align: center;
+    margin: 80px auto;
 }
