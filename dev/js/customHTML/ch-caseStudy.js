@@ -13,15 +13,17 @@ class CaseStudy extends HTMLElement {
         this.css = document.createElement('style');
     }
     connectedCallback() {
-        this.imgWrapper.setAttribute('class', 'img-wrapper')
+        this.imgWrapper.setAttribute('class', 'img-wrapper');
         this.src = this.getAttribute('src');
         this.alt = this.getAttribute('alt');
         this._heading = this.getAttribute('topic');
         this._bio = this.getAttribute('bio');
+        this._tags = this.getAttribute('tags');
+        this.tags = this._tags.toString();
         this.img.setAttribute('src', this.src);
         this.img.setAttribute('alt', this.alt);
-        this.heading.textContent = this._heading;
-        this.bio.textContent = this._bio;
+        this.heading.innerHTML = this._heading;
+        this.bio.innerHTML = this._bio;
         this.content.appendChild(this.heading);
         this.content.appendChild(this.bio);
         this.content.setAttribute('class', 'content');
@@ -33,9 +35,11 @@ class CaseStudy extends HTMLElement {
             '.right {right: -1px !important; left: auto;}' +
             'img{width: auto; height: 400px; transition: transform .2s ease-out}' +
             '.wrapper:hover img {transform: scale3d(0.8, 0.8, 1); transition: transform .2s ease-out}' +
-            '.content{display: flex; justify-content: center; align-items: center; flex-direction: column; width: 60%; max-width: 800px; height: 60%; margin-left: 200px}' +
+            '.content{display: flex; justify-content: center; align-items: center; flex-direction: column; width: 60%; max-width: 800px; height: 60%; margin-left: 200px;transition: transform .2s}' +
+            '.wrapper:hover .content {transform: scale3d(1.1, 1, 1); transition: transform .2s}' +
             '.right + .content{margin-left: 0 !important; margin-right: 200px}' +
             '.wrapper h1{float: left; color: #efefef; font-size: 24px; font-weight: 600; font-family: "Mada";text-align: left; width: 100%; line-height: 1.5}' +
+            'strong{color: white}' +
             '.wrapper p{float: left; color: #bababa; text-align: left; width: 100%;font-size: 18px; font-family: "Mada"; line-height: 1.5}' +
             /*media*/
             '@media screen and (max-width: 1000px) {' +
