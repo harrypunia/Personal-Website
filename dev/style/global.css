@@ -27,6 +27,7 @@ a {
 .container {
     width: 100vw;
     height: auto;
+    transition: transform .6s ease-out;
 }
 
 #canvas {

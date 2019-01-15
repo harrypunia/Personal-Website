@@ -47,18 +47,21 @@ class CaseStudy extends HTMLElement {
             '.right + .content{margin-left: 0 !important; margin-right: 200px}' +
             '.wrapper h1{float: left; color: #efefef; font-size: 24px; font-weight: 600; font-family: "Mada";text-align: left; width: 100%; line-height: 1.5}' +
             'strong{color: white}' +
-            '.wrapper p{float: left; color: #bababa; text-align: left; width: 100%;font-size: 18px; font-family: "Mada"; line-height: 1.5}' +
+            '.wrapper p{float: left; color: #bababa; text-align: left; width: 100%; font-size: 18px; font-family: "Mada"; line-height: 1.5}' +
             '.tag {display: flex; justify-content: center; align-items: center; width: 300px; height: 40px; position: absolute; right: 0; bottom: -60px; overflow: hidden}' +
             '.tags {transform: translateY(40px); transition: transform .2s}' +
-            '.tag h4 {margin: auto; background: #efefef; border-radius: 5px; padding: 10px; font-size: 16px; font-family: "Mada"}' +
+            '.tag h4 {margin: auto; background: #151515; color: white; border-radius: 5px; padding: 10px; font-size: 16px; font-family: "Mada"}' +
             '.right ~ .tag {left: 0}' +
             /*media*/
             '@media screen and (max-width: 1000px) {' +
             '.wrapper{height: 400px; margin: 200px 0;}' +
             '.img-wrapper {width: 400px; height: 250px; left: 50%; transform: translateX(-50%)}' +
             '.img-wrapper:hover img {transform: scale3d(0.8, 0.8, 1)}' +
+            '.wrapper:hover .content {transform: scale3d(1, 1, 1)}' +
             '.content {margin-left: 0; width: 80%; height: 200px; margin-top: 150px;}' +
             '.right + .content {margin-right: 0}' +
+            '.tag {left: 50%; transform: translateX(-50%)}' +
+            '.right ~ .tag {left: 50%; transform: translateX(-50%)}' +
             '}' +
             '@media screen and (max-width: 800px) {' +
             '.img-wrapper{width: 100%}' +
