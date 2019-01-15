@@ -1,4 +1,4 @@
-const toggleSkills = () => {
+(toggleSkills = () => {
     let skills = document.getElementsByClassName('intro__skills')[0],
         componenets = skills.getElementsByTagName('skill-component');
     if (skills.hasAttribute('open')) {
@@ -18,4 +18,4 @@ const toggleSkills = () => {
         updateScrollBar(y);
         parallax(y);
     }, 1000)
-}
+})();

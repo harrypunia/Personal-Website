@@ -1,1 +1,1 @@
-study{position:fixed;display:none;widtH:100vw;height:100vh;background:red;z-index:9999999999}.s__container{position:fixed;width:90vw;height:90vh}
+study{position:fixed;display:block;widtH:100vw;height:100vh;background:red;z-index:9999999999;transform:translateX(100vw);transition:transform .6s ease-out}.s__container{position:fixed;width:90vw;height:90vh}
