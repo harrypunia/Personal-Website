@@ -50,7 +50,7 @@ class CaseStudy extends HTMLElement {
             '.wrapper p{float: left; color: #bababa; text-align: left; width: 100%; font-size: 18px; font-family: "Mada"; line-height: 1.5}' +
             '.tag {display: flex; justify-content: center; align-items: center; width: 300px; height: 40px; position: absolute; right: 0; bottom: -60px; overflow: hidden}' +
             '.tags {transform: translateY(40px); transition: transform .2s}' +
-            '.tag h4 {margin: auto; background: #151515; color: white; border-radius: 5px; padding: 10px; font-size: 16px; font-family: "Mada"}' +
+            '.tag h4 {margin: auto; background: #efefef; color: black; border-radius: 5px; padding: 10px; font-size: 16px; font-family: "Mada"}' +
             '.right ~ .tag {left: 0}' +
             /*media*/
             '@media screen and (max-width: 1000px) {' +
