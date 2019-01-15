@@ -1,0 +1,15 @@
+study {
+    position: fixed;
+    display: none;
+    widtH: 100vw;
+    height: 100vh;
+    background: red;
+    z-index: 9999999999;
+}
+
+.s__container {
+    position: fixed;
+    width: 90vw;
+    height: 90vh;
+
+}
