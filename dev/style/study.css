@@ -3,7 +3,6 @@ study {
     display: block;
     widtH: 100vw;
     height: 100vh;
-    background: red;
     z-index: 9999999999;
     transform: translateX(100vw);
     transition: transform .6s ease-out;
@@ -12,6 +11,18 @@ study {
 .s__container {
     position: fixed;
     width: 90vw;
+    left: 5vw;
+    top: 5vh;
     height: 90vh;
 
+}
+
+.s__main-image {
+    width: 100%;
+    height: 400px;
+}
+
+.s__main-image img {
+    width: 100%;
+    height: auto;
 }
